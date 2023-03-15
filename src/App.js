@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Navbar from './components/navbar.js';
@@ -28,15 +29,3 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // };
 // export default App;
 
-
-export default function App() {
-  return (
-    <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<FlightResults />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}

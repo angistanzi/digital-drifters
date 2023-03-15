@@ -1,0 +1,24 @@
+.cityCard {
+  margin-bottom: 10px;
+}
+
+.card-img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  margin-bottom: 0px !important;
+}
+
+.gradientDiv {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    80%,
+    rgb(0, 0, 0, 1)
+  );
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
