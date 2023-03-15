@@ -1,10 +1,6 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import "./favorite-list.css";
+import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
+import "./Favourites.css";
 
 function Favorites() {
   return (
