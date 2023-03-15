@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
-import "./Favourites.css";
+import "./favorite-list.css";
 
 function Favorites() {
   return (
