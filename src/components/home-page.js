@@ -1,11 +1,7 @@
 import React from "react";
 
 function Home() {
-  return (
-    <div>
-      <Favorites></Favorites>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Home;
