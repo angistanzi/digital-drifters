@@ -16,17 +16,22 @@ function FlightResults() {
                         src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80"
                         alt="Flight"
                     />
-                    </Card>
-                    <div className="card-header bg-primary text-white">
-                        <h2 className="h5">Flight 123</h2> {/* Flight number */}
-                        <p className="text-muted">Departure: 10:00 AM</p>   {/* Departure time */}
-                    </div>
-                    <div className="card-body">
-                        <p className="lead">$200</p>{/* Price of the flight */}
-                        <button className="btn btn-primary">Book Now</button> {/* Book now button */}
-                    </div>
+                    <Card.Body>
+                        {/* Flight number */}
+                        <Card.Title>Flight 123</Card.Title>
+
+                        {/* Departure time */}
+                        <Card.Text className="text-muted">Departure: 10:00 AM</Card.Text>
+
+                        {/* Price of the flight */}
+                        <p className="lead">$200</p>
+
+                        {/* Book now button */}
+                        <Button variant="primary">Book Now</Button>
+                    </Card.Body>
+                </Card>
             </div>
-            
+
         </Container>
     );
 }
