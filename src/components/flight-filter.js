@@ -49,41 +49,52 @@ function FlightFilter() {
                     <Dropdown.Header>Filter by</Dropdown.Header>
                     <Dropdown.Divider />
                     {/* Cabin class input */}
-                    <Form.Group className="col-md-2" controlId="formCabinClass">
-                        <Form.Label>Cabin Class</Form.Label>
-                        <Form.Control as="select">
-                            <option>Economy</option>
-                            <option>Premium Economy</option>
-                            <option>Business</option>
-                            <option>First Class</option>
-                        </Form.Control>
-                    </Form.Group>
-                    {/* Direct Flights Only checkbox */}
-                    <Form.Group className="col-md-2" controlId="formDirectFlightsOnly">
-                        <Form.Label>Direct Flights Only</Form.Label>
-                        <Form.Check type="checkbox" label="" />
-                    </Form.Group>
-                    {/* Flexible Dates checkbox */}
-                    <Form.Group className="col-md-2" controlId="formFlexibleDates">
-                        <Form.Label>Flexible Dates</Form.Label>
-                        <Form.Check type="checkbox" label="" />
-                    </Form.Group>
-                    {/* Departure Time input */}
-                    <Form.Group className="col-md-2" controlId="formDepartureTime">
-                        <Form.Label>Departure Time</Form.Label>
-                        <Form.Control as="select" defaultValue="Any">
-                            <option>Any</option>
-                            <option>Morning</option>
-                            <option>Afternoon</option>
-                            <option>Evening</option>
-                        </Form.Control>
-                    </Form.Group>
-                    {/* Price Range input */}
-                    <Form.Group className="col-md-2" controlId="formPriceRange">
-                        <Form.Label>Price Range</Form.Label>
-                        <Form.Control type="number" placeholder="Min" />
-                        <Form.Control type="number" placeholder="Max" />
-                    </Form.Group></Dropdown.Menu>
+                    <Dropdown.Item>
+                        <Form.Group className="col-md-2" controlId="formCabinClass">
+                            <Form.Label>Cabin Class</Form.Label>
+                            <Form.Control as="select">
+                                <option>Economy</option>
+                                <option>Premium Economy</option>
+                                <option>Business</option>
+                                <option>First Class</option>
+                            </Form.Control>
+                        </Form.Group>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        {/* Direct Flights Only checkbox */}
+                        <Form.Group className="col-md-2" controlId="formDirectFlightsOnly">
+                            <Form.Label>Direct Flights Only</Form.Label>
+                            <Form.Check type="checkbox" label="" />
+                        </Form.Group>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        {/* Flexible Dates checkbox */}
+                        <Form.Group className="col-md-2" controlId="formFlexibleDates">
+                            <Form.Label>Flexible Dates</Form.Label>
+                            <Form.Check type="checkbox" label="" />
+                        </Form.Group>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        {/* Departure Time input */}
+                        <Form.Group className="col-md-2" controlId="formDepartureTime">
+                            <Form.Label>Departure Time</Form.Label>
+                            <Form.Control as="select" defaultValue="Any">
+                                <option>Any</option>
+                                <option>Morning</option>
+                                <option>Afternoon</option>
+                                <option>Evening</option>
+                            </Form.Control>
+                        </Form.Group>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        {/* Price Range input */}
+                        <Form.Group className="col-md-2" controlId="formPriceRange">
+                            <Form.Label>Price Range</Form.Label>
+                            <Form.Control type="number" placeholder="Min" />
+                            <Form.Control type="number" placeholder="Max" />
+                        </Form.Group>
+                    </Dropdown.Item>
+                </Dropdown.Menu>
             </Dropdown>
             {/* Submit button */}
             <Button variant="primary" type="submit">
