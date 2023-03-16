@@ -9,7 +9,7 @@ import SwipeCard from "../utils/swipe-card";
 function TravelInspo (){
 
     return(
-        <div class="container" style={{paddingTop: 30}}>
+        <div class="container travel-inspo" style={{paddingTop: 30}}>
 
         <header><h1 id="travelHeader">Destination Inspiration✨</h1></header>
         <div class ="card-group">
@@ -44,7 +44,7 @@ function TravelInspo (){
             
         </div>
 
-        <div class="row" id="attractions">
+        <div class="row" style={{paddingTop: 40}}>
           
             <SwipeCard/>
       

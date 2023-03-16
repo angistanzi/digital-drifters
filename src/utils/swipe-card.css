@@ -1,43 +1,12 @@
-/* #root {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  min-height: 100vh;
+#root {
+
   overflow: hidden;
-  /* background: linear-gradient(#fff, #999); */
-  /* background: linear-gradient(#e66465, #9198e5);
-} */ 
-
-* {
-  user-select: none;
-}
-
-#root>div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+} 
 
 .app {
   overflow: hidden;
 }
 
-.app>div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.row {
-  flex-direction: row !important;
-}
-
-.row>* {
-  margin: 5px;
-}
 
 h1 {
   color: #000000;
@@ -52,10 +21,22 @@ h2 {
   position: absolute;
 }
 
+#inspo-image{
+    max-height: 180px;
+}
+
+#attractions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 .cardContainer {
   width: 90vw;
   max-width: 260px;
   height: 300px;
+  
 }
 
 .card-swipe {
@@ -75,9 +56,6 @@ h2 {
   height: 100%;
 }
 
-.swipe:last-of-type {
-
-}
 
 .card-swipe h3 {
   position: absolute;

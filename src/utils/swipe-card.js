@@ -5,23 +5,23 @@ import './swipe-card.css'
 
 const db = [
   {
-    name: 'Richard Hendricks',
+    location: 'Location1',
     url: 'https://images.unsplash.com/photo-1519114056088-b877fe073a5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2666&q=80'
   },
   {
-    name: 'Erlich Bachman',
+    location: 'Location2',
     url: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1721&q=80'
   },
   {
-    name: 'Monica Hall',
+    location: 'Location3',
     url: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
   },
   {
-    name: 'Jared Dunn',
+    location: 'Location4',
     url: 'https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
   },
   {
-    name: 'Dinesh Chugtai',
+    location: 'Location5',
     url: 'https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=766&q=80'
   }
 ]
@@ -57,8 +57,8 @@ function Advanced () {
     updateCurrentIndex(index - 1)
   }
 
-  const outOfFrame = (name, idx) => {
-    console.log(`${name} (${idx}) left the screen!`, currentIndexRef.current)
+  const outOfFrame = (location, idx) => {
+    console.log(`${location} (${idx}) left the screen!`, currentIndexRef.current)
     // handle the case in which go back is pressed before card goes outOfFrame
     currentIndexRef.current >= idx && childRefs[idx].current.restoreCard()
     // TODO: when quickly swipe and restore multiple times the same card,
@@ -81,7 +81,7 @@ function Advanced () {
   }
 
   return (
-    <div>
+    <div id="attractions">
       <link
         href='https://fonts.googleapis.com/css?family=Damion&display=swap'
         rel='stylesheet'
@@ -90,21 +90,21 @@ function Advanced () {
         href='https://fonts.googleapis.com/css?family=Alatsi&display=swap'
         rel='stylesheet'
       />
-      <h1>React Tinder Card</h1>
-      <div className='cardContainer'>
+      <h1>Check these out!</h1>
+      <div className='cardContainer' id="attractions">
         {db.map((character, index) => (
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
-            key={character.name}
-            onSwipe={(dir) => swiped(dir, character.name, index)}
-            onCardLeftScreen={() => outOfFrame(character.name, index)}
+            key={character.location}
+            onSwipe={(dir) => swiped(dir, character.location, index)}
+            onCardLeftScreen={() => outOfFrame(character.location, index)}
           >
             <div
               style={{ backgroundImage: 'url(' + character.url + ')' }}
               className='card-swipe'
             >
-              <h3>{character.name}</h3>
+              <h3>{character.location}</h3>
             </div>
           </TinderCard>
         ))}
@@ -120,7 +120,7 @@ function Advanced () {
         </h2>
       ) : (
         <h2 className='infoText'>
-          Swipe a card or press a button to get Restore Card button visible!
+          Swipe right to add to favorites, and swipe left to see more!
         </h2>
       )}
     </div>
