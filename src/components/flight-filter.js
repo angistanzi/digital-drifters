@@ -4,7 +4,6 @@ import { Button } from 'react-bootstrap';
 
 function FlightFilter() {
     const [isOpen, setIsOpen] = useState(false);
-    const toggleDropdown = () => setIsOpen(!isOpen);
 
     return (
         <Form>
@@ -42,8 +41,8 @@ function FlightFilter() {
             </Row>
             {/* Extra filters dropdown */}
             <Dropdown>
-                <Dropdown.Toggle className="col-md-4" variant="secondary" id="filter-dropdown" onClick={toggleDropdown}>
-                   Additional Filters
+                <Dropdown.Toggle className="col-md-4" variant="secondary" id="filter-dropdown">
+                    Additional Filters
                 </Dropdown.Toggle>
                 <Dropdown.Menu show={isOpen}>
                     <Dropdown.Header>Filter by</Dropdown.Header>
@@ -52,8 +51,7 @@ function FlightFilter() {
                     <Dropdown.Item>
                         <Form.Group className="col-md-12" controlId="formCabinClass">
                             <Form.Label>Cabin Class</Form.Label>
-                            <Form.Control as="select">
-                                <option>Economy</option>
+                            <Form.Control as="select" onClick={(e) => e.stopPropagation()}>                                <option>Economy</option>
                                 <option>Premium Economy</option>
                                 <option>Business</option>
                                 <option>First Class</option>
@@ -78,7 +76,7 @@ function FlightFilter() {
                         {/* Departure Time input */}
                         <Form.Group className="col-md-12" controlId="formDepartureTime">
                             <Form.Label>Departure Time</Form.Label>
-                            <Form.Control as="select" defaultValue="Any">
+                            <Form.Control as="select" defaultValue="Any" onClick={(e) => e.stopPropagation()}>
                                 <option>Any</option>
                                 <option>Morning</option>
                                 <option>Afternoon</option>
@@ -90,8 +88,8 @@ function FlightFilter() {
                         {/* Price Range input */}
                         <Form.Group className="col-md-12" controlId="formPriceRange">
                             <Form.Label>Price Range</Form.Label>
-                            <Form.Control type="number" placeholder="Min" />
-                            <Form.Control type="number" placeholder="Max" />
+                            <Form.Control type="number" placeholder="Min" onClick={(e) => e.stopPropagation()} />
+                            <Form.Control type="number" placeholder="Max" onClick={(e) => e.stopPropagation()} />
                         </Form.Group>
                     </Dropdown.Item>
                 </Dropdown.Menu>
