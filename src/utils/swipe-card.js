@@ -102,7 +102,7 @@ function Advanced () {
           >
             <div
               style={{ backgroundImage: 'url(' + character.url + ')' }}
-              className='card'
+              className='card-swipe'
             >
               <h3>{character.name}</h3>
             </div>
