@@ -28,7 +28,7 @@ function FlightFilter() {
             </Row>
             <Row>
                 {/* Number of passengers input */}
-                <Form.Group className="col-md-3" controlId="formPassengers">
+                <Form.Group className="col-md-1" controlId="formPassengers">
                     <Form.Label>Passengers</Form.Label>
                     <Form.Control as="select" defaultValue="1">
                         <option>1</option>
@@ -39,7 +39,7 @@ function FlightFilter() {
                     </Form.Control>
                 </Form.Group>
                 {/* Cabin class input */}
-                <Form.Group as={Col} md="3" controlId="formCabinClass">
+                <Form.Group className="col-md-2"  controlId="formCabinClass">
                     <Form.Label>Cabin Class</Form.Label>
                     <Form.Control as="select">
                         <option>Economy</option>
@@ -47,6 +47,11 @@ function FlightFilter() {
                         <option>Business</option>
                         <option>First Class</option>
                     </Form.Control>
+                </Form.Group>
+                 {/* Direct Flights Only checkbox */}
+                 <Form.Group className="col-md-2" controlId="formDirectFlightsOnly">
+                    <Form.Label>Direct Flights Only</Form.Label>
+                    <Form.Check type="checkbox" label="" />
                 </Form.Group>
                 {/* Submit button */}
                 <Button variant="primary" type="submit">
