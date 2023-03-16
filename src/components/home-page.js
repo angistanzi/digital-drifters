@@ -1,15 +1,18 @@
 import React from 'react';
 import { Container, Card, Button } from 'react-bootstrap';
+import planeImg from '../assets/plane.png';
+import boatImg from '../assets/boat.jpg';
+import logoImg from '../assets/logo.png';
 
 function HomePage() {
   return (
     <div>
-   
       <Container className="mt-5">
         <h1>My React App</h1>
         <div className="row mt-5">
           <div className="col-md-6 mb-4">
             <Card>
+              <Card.Img variant="top" src={planeImg} className="card-img" />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
@@ -21,6 +24,7 @@ function HomePage() {
           </div>
           <div className="col-md-6 mb-4">
             <Card>
+              <Card.Img variant="top" src={boatImg} className="card-img" />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
@@ -40,4 +44,7 @@ function HomePage() {
 }
 
 export default HomePage;
+
+
+
 
