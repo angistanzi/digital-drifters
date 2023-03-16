@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
+    "react-swipe-card": "^0.1.4",
     "react-tinder-card": "^1.6.2",
     "routes": "^2.1.0",
     "usestate": "^1.1.3",

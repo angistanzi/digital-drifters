@@ -1,20 +1,62 @@
-import Cards, { Card } from 'react-swipe-card'
- 
- 
-const data = ['Alexandre', 'Thomas', 'Lucien']
- 
-function Wrapper() {
+import React, { useState, useMemo, useRef } from 'react'
+import TinderCard from 'react-tinder-card'
+import family from "../assets/familyfun.jpg"
+import './swipe-card.css'
+
+
+const db = [
+  {
+    name: 'Richard Hendricks',
+    url: 'https://images.unsplash.com/photo-1519114056088-b877fe073a5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2666&q=80'
+  },
+  {
+    name: 'Erlich Bachman',
+    url: './img/erlich.jpg'
+  },
+  {
+    name: 'Monica Hall',
+    url: './img/monica.jpg'
+  },
+  {
+    name: 'Jared Dunn',
+    url: './img/jared.jpg'
+  },
+  {
+    name: 'Dinesh Chugtai',
+    url: './img/dinesh.jpg'
+  }
+]
+
+function SwipeCard () {
+  const characters = db
+  const [lastDirection, setLastDirection] = useState()
+
+  const swiped = (direction, nameToDelete) => {
+    console.log('removing: ' + nameToDelete)
+    setLastDirection(direction)
+  }
+
+  const outOfFrame = (name) => {
+    console.log(name + ' left the screen!')
+  }
+
   return (
-      <Cards onEnd={action('end')} className='master-root'>
-        {data.map(item => 
-          <Card 
-            onSwipeLeft={action('swipe left')} 
-            onSwipeRight={action('swipe right')}>
-            <h2>{item}</h2>
-          </Card>
+    <div>
+      <link href='https://fonts.googleapis.com/css?family=Damion&display=swap' rel='stylesheet' />
+      <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
+      <h1>React Tinder Card</h1>
+      <div className='cardContainer'>
+        {characters.map((character) =>
+          <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
+            <div style={{ backgroundImage: 'url(' + character.url + ')' }} className='card'>
+              <h3>{character.name}</h3>
+            </div>
+          </TinderCard>
         )}
-      </Cards>
+      </div>
+      {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
+    </div>
   )
 }
 
-export default Wrapper;
+export default SwipeCard;
