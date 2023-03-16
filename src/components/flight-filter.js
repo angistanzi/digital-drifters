@@ -62,14 +62,14 @@ function FlightFilter() {
                         {/* Direct Flights Only checkbox */}
                         <Form.Group className="col-md-2" controlId="formDirectFlightsOnly">
                             <Form.Label>Direct Flights Only</Form.Label>
-                            <Form.Check type="checkbox" label="" />
+                            <Form.Check type="checkbox" label="" onClick={(e) => e.stopPropagation()} />
                         </Form.Group>
                     </Dropdown.Item>
                     <Dropdown.Item>
                         {/* Flexible Dates checkbox */}
                         <Form.Group className="col-md-2" controlId="formFlexibleDates">
                             <Form.Label>Flexible Dates</Form.Label>
-                            <Form.Check type="checkbox" label="" />
+                            <Form.Check type="checkbox" label="" onClick={(e) => e.stopPropagation()} />
                         </Form.Group>
                     </Dropdown.Item>
                     <Dropdown.Item>
