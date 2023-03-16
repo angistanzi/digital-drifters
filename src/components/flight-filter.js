@@ -1,11 +1,11 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Form, Row } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 
 function FlightFilter() {
     return (
         <Form>
-            <Form.Row>
+            <Row>
                 {/* Departure location input */}
                 <Form.Group className="col-md-4" controlId="formDeparture">
                     <Form.Label>Departure</Form.Label>
@@ -25,8 +25,8 @@ function FlightFilter() {
                     <Form.Label>Return date</Form.Label>
                     <Form.Control type="date" />
                 </Form.Group>
-            </Form.Row>
-            <Form.Row>
+            </Row>
+            <Row>
                 {/* Number of passengers input */}
                 <Form.Group className="col-md-3" controlId="formPassengers">
                     <Form.Label>Passengers</Form.Label>
@@ -42,7 +42,7 @@ function FlightFilter() {
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
-            </Form.Row>
+            </Row>
         </Form>
     )
 };
