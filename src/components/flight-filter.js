@@ -42,15 +42,15 @@ function FlightFilter() {
             </Row>
             {/* Extra filters dropdown */}
             <Dropdown>
-                <Dropdown.Toggle variant="secondary" id="filter-dropdown" onClick={toggleDropdown}>
-                    Filters
+                <Dropdown.Toggle className="col-md-4" variant="secondary" id="filter-dropdown" onClick={toggleDropdown}>
+                   Additional Filters
                 </Dropdown.Toggle>
                 <Dropdown.Menu show={isOpen}>
                     <Dropdown.Header>Filter by</Dropdown.Header>
                     <Dropdown.Divider />
                     {/* Cabin class input */}
                     <Dropdown.Item>
-                        <Form.Group className="col-md-2" controlId="formCabinClass">
+                        <Form.Group className="col-md-12" controlId="formCabinClass">
                             <Form.Label>Cabin Class</Form.Label>
                             <Form.Control as="select">
                                 <option>Economy</option>
@@ -76,7 +76,7 @@ function FlightFilter() {
                     </Dropdown.Item>
                     <Dropdown.Item>
                         {/* Departure Time input */}
-                        <Form.Group className="col-md-2" controlId="formDepartureTime">
+                        <Form.Group className="col-md-12" controlId="formDepartureTime">
                             <Form.Label>Departure Time</Form.Label>
                             <Form.Control as="select" defaultValue="Any">
                                 <option>Any</option>
@@ -88,7 +88,7 @@ function FlightFilter() {
                     </Dropdown.Item>
                     <Dropdown.Item>
                         {/* Price Range input */}
-                        <Form.Group className="col-md-2" controlId="formPriceRange">
+                        <Form.Group className="col-md-12" controlId="formPriceRange">
                             <Form.Label>Price Range</Form.Label>
                             <Form.Control type="number" placeholder="Min" />
                             <Form.Control type="number" placeholder="Max" />
