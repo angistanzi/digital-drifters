@@ -11,7 +11,7 @@ function TravelInspo (){
     return(
         <div class="container travel-inspo" style={{paddingTop: 30}}>
 
-        <header><h1 id="travelHeader">Destination Inspiration✨</h1></header>
+        <header><h1 id="travelHeader" class="display-4 fw-bold mb-5">DESTINATION INSPIRATION✨</h1></header>
         <div class ="card-group">
              <div class="card" >
                 <img src={historical} class="card-img-top" id="inspo-image" alt="..."></img>

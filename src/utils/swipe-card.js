@@ -90,7 +90,7 @@ function Advanced () {
         href='https://fonts.googleapis.com/css?family=Alatsi&display=swap'
         rel='stylesheet'
       />
-      <h1>Check these out!</h1>
+      <h1 class="display-4 fw-bold mb-5">CHECK THESE OUT...</h1>
       <div className='cardContainer' id="attractions">
         {db.map((character, index) => (
           <TinderCard
