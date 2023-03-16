@@ -1,13 +1,4 @@
-#root {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    min-height: 100vh;
-    overflow: hidden;
-    /* background: linear-gradient(#fff, #999); */
-    background: linear-gradient(#e66465, #9198e5);
-  }
+
   
   * {
     user-select: none;
@@ -40,8 +31,7 @@
   }
   
   h1 {
-    font-family: 'Damion', cursive;
-    color: #fff;
+    color: #000000;
     text-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
   }
   
@@ -59,7 +49,7 @@
     height: 300px;
   }
   
-  .card {
+  .card-swipe {
     position: relative;
     background-color: #fff;
     width: 80vw;
@@ -76,10 +66,9 @@
     height: 100%;
   }
   
-  .swipe:last-of-type {
-  
+  .swipe-h1{
+    color: white;
   }
-  
   .card h3 {
     position: absolute;
     bottom: 0;
