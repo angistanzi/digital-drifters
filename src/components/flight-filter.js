@@ -38,6 +38,16 @@ function FlightFilter() {
                         <option>5+</option>
                     </Form.Control>
                 </Form.Group>
+                {/* Cabin class input */}
+                <Form.Group as={Col} md="3" controlId="formCabinClass">
+                    <Form.Label>Cabin Class</Form.Label>
+                    <Form.Control as="select">
+                        <option>Economy</option>
+                        <option>Premium Economy</option>
+                        <option>Business</option>
+                        <option>First Class</option>
+                    </Form.Control>
+                </Form.Group>
                 {/* Submit button */}
                 <Button variant="primary" type="submit">
                     Submit
