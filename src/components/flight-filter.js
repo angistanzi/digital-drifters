@@ -53,6 +53,18 @@ function FlightFilter() {
                     <Form.Label>Direct Flights Only</Form.Label>
                     <Form.Check type="checkbox" label="" />
                 </Form.Group>
+                {/* Flexible Dates checkbox */}
+                <Form.Group className="col-md-2" controlId="formFlexibleDates">
+                    <Form.Label>Flexible Dates</Form.Label>
+                    <Form.Check type="checkbox" label="" />
+                </Form.Group>
+                {/* Price Range input */}
+                <Form.Group className="col-md-2" controlId="formPriceRange">
+                    <Form.Label>Price Range</Form.Label>
+                    <Form.Control type="number" placeholder="Min" />
+                    <Form.Control type="number" placeholder="Max" />
+                </Form.Group>
+                
                 {/* Submit button */}
                 <Button variant="primary" type="submit">
                     Submit
