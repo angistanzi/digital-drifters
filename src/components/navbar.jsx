@@ -2,6 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logoImg from '../assets/logo.png';
 
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-secondary" style={{ height: "80px" }}>

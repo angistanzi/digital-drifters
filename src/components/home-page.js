@@ -4,8 +4,6 @@ import planeImg from '../assets/plane.png';
 import boatImg from '../assets/boat.jpg';
 import favesImg from '../assets/faves.png';
 
-
-
 function HomePage() {
   return (
     <div>
@@ -13,7 +11,7 @@ function HomePage() {
         <h1>Want to book flights or not sure where to go? Explore some options below!</h1>
         <div className="row mt-5">
           <div className="col-md-6 mb-4">
-            <Card>
+          <Card style={{ boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.4)' }}>
               <Card.Img variant="top" src={planeImg} className="card-img" />
               <Card.Body>
                 <Card.Title>Book your flight today</Card.Title>
@@ -25,7 +23,7 @@ function HomePage() {
             </Card>
           </div>
           <div className="col-md-6 mb-4">
-            <Card>
+          <Card style={{ boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.4)' }}>
               <Card.Img variant="top" src={boatImg} className="card-img" />
               <Card.Body>
                 <Card.Title>Travel Inspiration</Card.Title>
@@ -37,7 +35,7 @@ function HomePage() {
             </Card>
           </div>
           <div className="col-md-12 d-flex justify-content-center">
-            <Card style={{ width: '50rem' }}>
+            <Card style={{ width: '50rem', boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.4)'}}>
               <Card.Img variant="top" src={favesImg} className="card-img" />
               <Card.Body>
                 <Card.Title>Your Card Title</Card.Title>
