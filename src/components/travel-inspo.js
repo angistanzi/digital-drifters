@@ -47,9 +47,8 @@ function TravelInspo (){
 
         <div class="row" id="attractions">
         <TinderCard>
-       <SwipeCard/>
-
-       </TinderCard>
+        <SwipeCard/>
+        </TinderCard>
         </div>
 
 
