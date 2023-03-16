@@ -3,7 +3,7 @@ import Cards, { Card } from 'react-swipe-card'
  
 const data = ['Alexandre', 'Thomas', 'Lucien']
  
-const Wrapper = () => {
+function Wrapper() {
   return (
       <Cards onEnd={action('end')} className='master-root'>
         {data.map(item => 
@@ -16,3 +16,5 @@ const Wrapper = () => {
       </Cards>
   )
 }
+
+export default Wrapper;
