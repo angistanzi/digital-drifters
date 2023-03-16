@@ -31,4 +31,26 @@ function SwipeCard(){
     const [lastDirection, setLastDirection] =  useState()
     const currentIndexRef = useRef(currentIndex)
 
-}
+    const childRefs = useMemo(
+        () =>
+          Array(db.length)
+            .fill(0)
+            .map((i) => React.createRef()),
+        []
+      )
+
+    const updateCurrentIndex = (val) => {
+        setCurrentIndex(val)
+        currentIndexRef.current = val
+      }
+
+    const canGoBack = currentIndex < db.length - 1
+    const canSwipe = currentIndex >= 0
+
+    const swiped = (direction, nameToDelete, index) => {
+        setLastDirection(direction)
+        updateCurrentIndex(index - 1)
+      }
+    
+
+};
