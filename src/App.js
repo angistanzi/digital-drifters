@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Navbar from './components/navbar.js';
 // import Home from './components/home-page.js';
 // import TravelInspo from './components/travel-inspo.js';
 import FlightResults from './components/flight-results.js';
-import FlightFilter from './components/flight-filter.js';
+// import FlightFilter from './components/flight-filter.js';
 // import Favorites from './components/favorite-list.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -35,7 +35,6 @@ export default function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<FlightFilter />} />
           <Route path="/" element={<FlightResults />} />
         </Routes>
       </div>

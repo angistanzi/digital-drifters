@@ -2,7 +2,7 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 
-export default function FlightFilter() {
+function FlightFilter() {
     return (
         <Form>
             <Form.Row>
@@ -46,3 +46,5 @@ export default function FlightFilter() {
         </Form>
     )
 };
+
+export default FlightFilter;
