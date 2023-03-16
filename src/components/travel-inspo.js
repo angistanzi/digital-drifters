@@ -5,7 +5,7 @@ import outdoors from '../assets/outdoors.jpg'
 import familyfun from '../assets/familyfun.jpg'
 import random from '../assets/random.jpg'
 import TinderCard from "react-tinder-card";
-import { useState } from "react";
+import SwipeCard from "../utils/swipe-card";
 
 function TravelInspo (){
 
@@ -45,10 +45,11 @@ function TravelInspo (){
             
         </div>
 
-        <div id="attractions">
+        <div class="row" id="attractions">
+        <TinderCard>
+       <SwipeCard/>
 
-        <h1>attractions</h1>
-
+       </TinderCard>
         </div>
 
 
