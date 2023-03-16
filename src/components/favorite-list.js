@@ -4,23 +4,38 @@ import "./favorite-list.css";
 import { getCityData } from "../utils/API";
 
 function Favorites() {
+  // Defining state variables using the useState hook.
   const [cityName, setCityName] = useState("");
   const [visitedCities, setVisitedCities] = useState(
+    // Getting the array of visited cities from local storage,
+    // or start it with an empty array if it doesn't exist yet.
+
     JSON.parse(localStorage.getItem("visitedCities")) || []
   );
 
+  // Using the useEffect hook to save
+  // the updated array of visited cities to local storage.
   useEffect(() => {
     localStorage.setItem("visitedCities", JSON.stringify(visitedCities));
   }, [visitedCities]);
 
+  // Defining a function to handle a form submission.
   const handleSubmit = (event) => {
     event.preventDefault();
+    // Calling the getCityData function
+    // from the API.js to get some data for the entered city.
     getCityData(cityName).then((cityData) => {
+      // Adding the city data to the array of
+      // visited cities using the spread operator.
+
       setVisitedCities([...visitedCities, cityData]);
     });
+
+    // Clearing the input field after the city has been added.
     setCityName("");
   };
 
+  // Rendering the component.
   return (
     <Container className="py-5 my-5">
       <div className="text-center mb-5">
