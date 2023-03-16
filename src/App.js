@@ -35,6 +35,7 @@ export default function App() {
     <Router>
       <div>
         <Routes>
+          <Route path="/" element={<FlightFilter />} />
           <Route path="/" element={<FlightResults />} />
         </Routes>
       </div>
