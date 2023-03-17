@@ -4,10 +4,14 @@ import historical from '../assets/ruins.jpg'
 import outdoors from '../assets/outdoors.jpg'
 import familyfun from '../assets/familyfun.jpg'
 import random from '../assets/random.jpg'
+import SwipeCard from "../utils/swipe-card";
+
 function TravelInspo (){
 
     return(
-        <div class="container" style={{paddingTop: 30}}>
+        <div class="container travel-inspo" style={{paddingTop: 30}}>
+
+        <header><h1 id="travelHeader" class="display-4 fw-bold mb-5">DESTINATION INSPIRATION✨</h1></header>
         <div class ="card-group">
              <div class="card" >
                 <img src={historical} class="card-img-top" id="inspo-image" alt="..."></img>
@@ -40,21 +44,11 @@ function TravelInspo (){
             
         </div>
 
-        <div class="row justify-content-around align-items-center" style={{paddingTop: 50}}>
-       
-       <div class="col"> <a href="#showmore" class="btn btn-warning">Show me more!</a> </div>
-
-        <div class="card col-6">
-        <img src={random} class="card-img-top" id="suggestion" alt="..."></img>
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div class="row" style={{paddingTop: 40}}>
+          
+            <SwipeCard/>
+      
         </div>
-        </div>
-
-        <div class="col"> <a href="#showmore" class="btn btn-warning">Add to Favorites</a> </div>
-
-       </div>
 
 
         </div>
