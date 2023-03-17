@@ -6,6 +6,8 @@ import familyfun from '../assets/familyfun.jpg'
 import random from '../assets/random.jpg'
 import SwipeCard from "../utils/swipe-card";
 
+// Fetch request for each card to pull cities with respective attractions when button is clicked
+// Need to append those results to display into swipe cards
 function TravelInspo (){
 
     return(

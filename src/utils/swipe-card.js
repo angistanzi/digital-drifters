@@ -2,6 +2,8 @@ import React, { useState, useRef, useMemo } from 'react'
 import TinderCard from 'react-tinder-card' 
 import './swipe-card.css'
 
+//Add to favorites button local storage 
+
 
 const db = [
   {
