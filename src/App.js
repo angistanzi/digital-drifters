@@ -14,6 +14,7 @@ import Favorites from './components/favorite-list.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function App() {
   return (
     <Router>
@@ -27,7 +28,9 @@ function App() {
           <Route path='/flight-results' element={<FlightResults />} />
           <Route path='/travel-inspo' element={<TravelInspo />} />
           {/* Define a route that will have descendant routes */}
+
           <Route path='/favorite-list' element={<Favorites />} />
+
         </Routes>
       </div>
     </Router>

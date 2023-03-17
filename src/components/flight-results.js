@@ -1,12 +1,17 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+
 import FlightFilter from './flight-filter';
+
 
 function FlightResults() {
 
     return (
         <Container>
+
+
             <FlightFilter />
+
             {/* Main container for flight results page */}
             <h1 className="display-4 text-primary">Search Results</h1>  {/* Header for the search results page */}
             {/* Top result card */}

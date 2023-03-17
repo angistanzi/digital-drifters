@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
 import "./favorite-list.css";
 import { getCityData } from "../utils/API";
+
 
 function Favorites() {
   const [cityName, setCityName] = useState("");
