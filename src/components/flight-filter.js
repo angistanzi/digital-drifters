@@ -3,8 +3,34 @@ import { Form, Row, Dropdown } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 
 function FlightFilter() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen] = useState(false);
 
+    // make the flight search button call the information requested
+    const handleSubmit = (event) => {
+        event.preventDefault(); // prevent form submission from reloading the page
+
+        // gather form input values
+        const form = event.currentTarget;
+        const departure = form.elements["formDeparture"].value;
+        const destination = form.elements["formDestination"].value;
+        const departureDate = form.elements["formDepartureDate"].value;
+        const returnDate = form.elements["formReturnDate"].value;
+        const passengers = form.elements["formPassengers"].value;
+        const cabinClass = form.elements["formCabinClass"].value;
+        const directFlightsOnly = form.elements["formDirectFlightsOnly"].checked;
+        const flexibleDates = form.elements["formFlexibleDates"].checked;
+        const departureTime = form.elements["formDepartureTime"].value;
+        const minPrice = form.elements["formPriceRange"][0].value;
+        const maxPrice = form.elements["formPriceRange"][1].value;
+
+        // TODO: Send the form data to the server to fetch flight search results
+    };
+        // construct API request URL with form input values as parameters
+        const apiUrl = ""
+            // make API request using the constructed URL
+                // do something with the retrieved flight search results
+
+    }
     return (
         <Form>
             <Row>
