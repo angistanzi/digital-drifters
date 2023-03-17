@@ -4,6 +4,7 @@ import planeImg from '../assets/plane.png';
 import boatImg from '../assets/boat.jpg';
 import favesImg from '../assets/faves.png';
 
+
 function HomePage() {
   return (
     <div>
@@ -59,7 +60,5 @@ function HomePage() {
 }
 
 export default HomePage;
-
-
 
 
