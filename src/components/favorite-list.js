@@ -6,6 +6,7 @@ import { getCityData } from "../utils/API";
 function Favorites() {
   // Defining state variables using the useState hook.
   const [cityName, setCityName] = useState("");
+  const [cardsToRender, setCardsToRender] = useState(5);
   const [visitedCities, setVisitedCities] = useState(
     // Getting the array of visited cities from local storage,
     // or start it with an empty array if it doesn't exist yet.
@@ -60,7 +61,7 @@ function Favorites() {
             <h2>Places I've been</h2>
           </div>
 
-          {visitedCities.map((city) => (
+          {visitedCities.slice(0, cardsToRender).map((city) => (
             <Card key={city.id} className="cityCard text-white">
               <Card.Img
                 src={city.image}
@@ -72,13 +73,27 @@ function Favorites() {
                 <div className="d-inline-flex justify-content-between">
                   <Card.Title>{`${city.name}, ${city.country}`}</Card.Title>
                   <Button variant="warning" size="sm">
-                    Similar places
+                    More cities
                   </Button>
                 </div>
               </Card.ImgOverlay>
             </Card>
           ))}
+
+          {cardsToRender >= visitedCities.length ? null : (
+            <div className="text-center my-3">
+              <Button
+                onClick={() => {
+                  setCardsToRender(cardsToRender + 5);
+                }}
+                variant="light"
+              >
+                Show me more
+              </Button>
+            </div>
+          )}
         </Col>
+
         <Col lg="5">
           <div className="text-center mb-5">
             <h2>Places I want to go</h2>

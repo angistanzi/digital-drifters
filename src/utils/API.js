@@ -15,7 +15,7 @@ export const getCityData = (cityName) => {
   )
     .then((response) => response.json())
     .then((response) => {
-      // console.log(response);
+      console.log(response);
       // Extracting relevant city data from the response and return it as an smaller object.
       return {
         name: response.data[0].result_object.name,
