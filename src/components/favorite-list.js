@@ -27,11 +27,13 @@ function Favorites() {
     event.preventDefault();
     // Calling the getCityData function
     // from the API.js to get some data for the entered city.
-    getCityData(cityName).then((cityData) => {
-      // Adding the city data to the array of
-      // visited cities using the spread operator.
-      setVisitedCities([...visitedCities, cityData]);
-    });
+    getCityData(cityName)
+      .then((cityData) => {
+        // Adding the city data to the array of
+        // visited cities using the spread operator.
+        setVisitedCities([...visitedCities, cityData]);
+      })
+      .catch(() => alert("Please try again"));
     // Clearing the input field after the city has been added.
     setCityName("");
   };
