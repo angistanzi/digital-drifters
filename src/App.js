@@ -1,11 +1,17 @@
 
+import React from 'react';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar.js';
 import Home from './components/home-page.js';
 import TravelInspo from './components/travel-inspo.js';
 import FlightResults from './components/flight-results.js';
+
+// import FlightFilter from './components/flight-filter.js';
+// import Favorites from './components/favorite-list.js';
+
 import Favorites from './components/favorite-list.js';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
