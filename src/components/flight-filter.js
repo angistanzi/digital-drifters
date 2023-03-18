@@ -31,7 +31,7 @@ function FlightFilter() {
                 // do something with the retrieved flight search results
 
     }
-    return (
+     (
         <Form>
             <Row>
                 {/* Departure location input */}
@@ -126,6 +126,6 @@ function FlightFilter() {
             </Button>
         </Form>
     )
-};
+;
 
 export default FlightFilter;
