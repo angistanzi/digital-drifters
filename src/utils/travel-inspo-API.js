@@ -1,74 +1,74 @@
 let historicalRuins = [  
-        "Rome, Italy",  
-        "Athens, Greece",  
-        "Machu Picchu, Peru", 
-        "Cusco, Peru",  
-        "Chichen Itza, Mexico",  
-        "Teotihuacan, Mexico",  
-        "Angkor Wat, Cambodia",  
-        "Bagan, Myanmar",  
-        "Petra, Jordan",  
-        "Ephesus, Turkey",  
-        "Palmyra, Syria",  
-        "Luxor, Egypt",  
-        "Giza, Egypt",  
-        "Jerusalem, Israel",  
-        "Tikal, Guatemala",  
-        "Palenque, Mexico",  
-        "Copan, Honduras",  
-        "Tulum, Mexico",  
-        "Pompeii, Italy",  
-        "Trier, Germany"
+        "Rome",  
+        "Athens",   
+        "Cusco",  
+        "Teotihuacan",  
+        "Angkor Wat",  
+        "Bagan",  
+        "Petra",  
+        "Ephesus",  
+        "Palmyra",  
+        "Luxor",  
+        "Giza",  
+        "Jerusalem",  
+        "Tikal",  
+        "Palenque",  
+        "Copan",  
+        "Tulum",  
+        "Pompeii",  
+        "Trier"
     ]
 
 
 let familyFriendly = [
-     "Orlando, Florida, USA",  
-     "Anaheim, California, USA",  
-     "San Diego, California, USA",  
-     "Tokyo, Japan",  
-     "Paris, France",  
-     "London, United Kingdom",  
-     "Sydney, Australia",  
-     "Vancouver, Canada",  
-     "Dubai, United Arab Emirates",  
-     "Hong Kong, China",  
+     "Orlando",  
+     "Anaheim",  
+     "San Diego",  
+     "Tokyo",  
+     "Paris",  
+     "London",  
+     "Sydney",  
+     "Vancouver",  
+     "Dubai",  
+     "Hong Kong",  
      "Singapore",  
-     "Oranjestad, Aruba",  
-     "Phuket, Thailand",  
-     "Cancun, Mexico",  
-     "Punta Cana, Dominican Republic",  
-     "Nassau, Bahamas",  
-     "Barcelona, Spain",  
-     "Copenhagen, Denmark",  
-     "Vienna, Austria",  
-     "Oslo, Norway"
+     "Oranjestad",  
+     "Phuket",  
+     "Cancun",  
+     "Punta Cana",  
+     "Nassau",  
+     "Barcelona",  
+     "Copenhagen",  
+     "Vienna",  
+     "Oslo"
 
 ]
 
 let outdoorCities = [  
-    "Queenstown, New Zealand",  
-    "Cape Town, South Africa",  
-    "Vancouver, Canada",  
-    "Denver, Colorado, USA",  
-    "Queenstown, New Zealand",  
-    "Sydney, Australia",  
-    "Buenos Aires, Argentina",  
-    "Munich, Germany",  
-    "Rio de Janeiro, Brazil",  
-    "Innsbruck, Austria",  
-    "Reykjavik, Iceland",  
-    "Salzburg, Austria",  
-    "Zurich, Switzerland",  
-    "San Francisco, California, USA",  
-    "Denver, Colorado, USA",  
-    "Chiang Mai, Thailand",  
-    "Bergen, Norway",  
-    "Vancouver, Canada",  
-    "Portland, Oregon, USA",  
-    "Cape Town, South Africa"
+    "Queenstown",  
+    "Cape Town",  
+    "Vancouver",  
+    "Denver",  
+    "Queenstown",  
+    "Sydney",  
+    "Buenos Aires",  
+    "Munich",  
+    "Rio de Janeiro",  
+    "Innsbruck",  
+    "Reykjavik",  
+    "Salzburg",  
+    "Zurich",  
+    "San Francisco",  
+    "Denver",  
+    "Chiang Mai",  
+    "Bergen",  
+    "Vancouver",  
+    "Portland",  
+    "Cape Town"
 ]
 
+let randomHistoricalRuins = Math.floor(Math.random()*outdoorCities.length);
+let randomCity = historicalRuins[randomHistoricalRuins];
 
 const options = {
 	method: 'GET',
@@ -80,7 +80,7 @@ const options = {
 
 
 fetch(
-    `https://travel-advisor.p.rapidapi.com/locations/search?query=london&limit=1&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`,
+    `https://travel-advisor.p.rapidapi.com/locations/search?query=${randomCity}&limit=1&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`,
     options
   )
   .then((response) => response.json())
