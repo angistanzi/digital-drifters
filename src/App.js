@@ -22,7 +22,7 @@ function App() {
         {/* Wrap Route elements in a Routes component */}
         <Routes basename='/Digital-Drifters/'>
           {/* Define a default route that will render the Home component */}
-          <Route path='/' element={<Home />} />
+          {/* <Route path='/' element={<Home />} /> */}
           {/* Define routes using the Route component to render different page components at different paths */}
           <Route path='/flight-results' element={<FlightResults />} />
           <Route path='/travel-inspo' element={<TravelInspo />} />
