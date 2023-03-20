@@ -4,7 +4,8 @@ import { Button } from 'react-bootstrap';
 
 function FlightFilter() {
     const [isOpen] = useState(false);
-
+    const [flightResults, setFlightResults] = useState([]);
+    
     // make the flight search button call the information requested
     const handleSubmit = (event) => {
         event.preventDefault(); // prevent form submission from reloading the page
@@ -40,7 +41,7 @@ function FlightFilter() {
             .then((data) => {
                 console.log(data);
               // TODO: Update state with the retrieved flight search results
-              setState({ flightResults: data });
+              setFlightResults(data);
             })
             .catch((error) => {
               console.error(error);
