@@ -78,7 +78,23 @@ const options = {
 	}
 };
 
-fetch('https://travel-advisor.p.rapidapi.com/attractions/list?location_id=298571&currency=USD&lang=en_US&lunit=km&sort=recommended', options)
-	.then(response => response.json())
-	.then(response => console.log(response));
+
+fetch(
+    `https://travel-advisor.p.rapidapi.com/locations/search?query=london&limit=1&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`,
+    options
+  )
+  .then((response) => response.json())
+  .then((response) => {
+
+    let locationId = response.data[0].result_object.location_id
+       
+    return fetch(`https://travel-advisor.p.rapidapi.com/attractions/list?location_id=${locationId}&currency=USD&lang=en_US&lunit=km&sort=recommended`, options)
+        .then(response => response.json())
+        .then(response => {
+
+        console.log(response)
+        
+        
+        
+        })});
 
