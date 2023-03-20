@@ -1,10 +1,10 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar.jsx';
-import Home from './components/home-page.js';
+// import Home from './components/home-page.js';
 import TravelInspo from './components/travel-inspo.js';
-import FlightResults from './components/flight-results.js';
+import FlightFilter from './components/flight-filter';
 
 // import FlightFilter from './components/flight-filter.js';
 // import Favorites from './components/favorite-list.js';
@@ -24,7 +24,7 @@ function App() {
           {/* Define a default route that will render the Home component */}
           {/* <Route path='/' element={<Home />} /> */}
           {/* Define routes using the Route component to render different page components at different paths */}
-          <Route path='/flight-results' element={<FlightResults />} />
+          <Route path='/flight-filter' element={<FlightFilter />} />
           <Route path='/travel-inspo' element={<TravelInspo />} />
           {/* Define a route that will have descendant routes */}
 

@@ -1,5 +1,5 @@
 import React from "react";
-import css from '../assets/travel-inspo.css'
+// import css from '../assets/travel-inspo.css'
 import historical from '../assets/ruins.jpg'
 import outdoors from '../assets/outdoors.jpg'
 import familyfun from '../assets/familyfun.jpg'
