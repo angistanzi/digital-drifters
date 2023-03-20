@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
-import "./favorite-list.css";
+import { NavLink } from "react-router-dom";
 import { getCityData } from "../utils/API";
+import "./favorite-list.css";
 
 // book flight button linked to flight component.
 // Add a counter on visited cities.
@@ -113,7 +114,15 @@ function Favorites() {
               <div className="d-inline-flex justify-content-between">
                 <Card.Title>Tokyo, Japan</Card.Title>
                 <Button variant="warning" size="sm">
-                  Book flights
+                  <NavLink
+                    to="/flight-results"
+                    // When the NavLink is active, the "active" class is added.
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                  >
+                    Book flights
+                  </NavLink>
                 </Button>
               </div>
             </Card.ImgOverlay>
@@ -129,7 +138,15 @@ function Favorites() {
               <div className="d-inline-flex justify-content-between">
                 <Card.Title>Shanghai, China</Card.Title>
                 <Button variant="warning" size="sm">
-                  Book flights
+                  <NavLink
+                    to="/flight-results"
+                    // When the NavLink is active, the "active" class is added.
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                  >
+                    Book flights
+                  </NavLink>
                 </Button>
               </div>
             </Card.ImgOverlay>
@@ -145,7 +162,15 @@ function Favorites() {
               <div className="d-inline-flex justify-content-between">
                 <Card.Title>Taipei, Taiwan</Card.Title>
                 <Button variant="warning" size="sm">
-                  Book flights
+                  <NavLink
+                    to="/flight-results"
+                    // When the NavLink is active, the "active" class is added.
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                  >
+                    Book flights
+                  </NavLink>
                 </Button>
               </div>
             </Card.ImgOverlay>
