@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Row, Dropdown } from "react-bootstrap";
+
 import { Button } from 'react-bootstrap';
 import FlightResults from "./flight-results.js";
 
@@ -7,26 +8,26 @@ function FlightFilter() {
     const [isOpen, setIsOpen] = useState(false);
     const [flightFilter, setFlightResults] = useState([]);
 
-    // make the flight search button call the information requested
-    const handleSubmit = (event) => {
-        event.preventDefault(); // prevent form submission from reloading the page
 
-        // gather form input values
-        const form = event.currentTarget;
-        const departure = form.elements["formDeparture"].value;
-        const destination = form.elements["formDestination"].value;
-        const departureDate = form.elements["formDepartureDate"].value;
-        const returnDate = form.elements["formReturnDate"].value;
-        const passengers = form.elements["formPassengers"].value;
-        const cabinClass = form.elements["formCabinClass"].value;
-        const directFlightsOnly = form.elements["formDirectFlightsOnly"].checked;
-        const flexibleDates = form.elements["formFlexibleDates"].checked;
-        const departureTime = form.elements["formDepartureTime"].value;
-        const minPrice = form.elements["formPriceRange"][0].value;
-        const maxPrice = form.elements["formPriceRange"][1].value;
+  // make the flight search button call the information requested
+  const handleSubmit = (event) => {
+    event.preventDefault(); // prevent form submission from reloading the page
+
+    // gather form input values
+    const form = event.currentTarget;
+    const departure = form.elements["formDeparture"].value;
+    const destination = form.elements["formDestination"].value;
+    const departureDate = form.elements["formDepartureDate"].value;
+    const returnDate = form.elements["formReturnDate"].value;
+    const passengers = form.elements["formPassengers"].value;
+    const cabinClass = form.elements["formCabinClass"].value;
+    const directFlightsOnly = form.elements["formDirectFlightsOnly"].checked;
+    const flexibleDates = form.elements["formFlexibleDates"].checked;
+    const departureTime = form.elements["formDepartureTime"].value;
+    const minPrice = form.elements["formPriceRange"][0].value;
+    const maxPrice = form.elements["formPriceRange"][1].value;
 
         // TODO: Send the form data to the server to fetch flight search results
-
         // construct API request URL with form input values as parameters
         const apiKey = "c0b475d5b9mshe4e202547ee2d89p180241jsn4882db8fe45c";
         const apiUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${departure}-sky/${destination}-sky/${departureDate}?inboundpartialdate=${returnDate}`;
@@ -148,3 +149,4 @@ function FlightFilter() {
 };
 FlightResults();
 export default FlightFilter;
+
