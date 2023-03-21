@@ -18,11 +18,11 @@ function FlightResults() {
                 <Card.Body>
                   <Card.Title>{flight.airline}</Card.Title>
                   <Card.Text>
-                    <strong>{flight.departureAirport}</strong> to{' '}
-                    <strong>{flight.arrivalAirport}</strong>
+                    <strong>{flight.departure}</strong> to{' '}
+                    <strong>{flight.destination}</strong>
                   </Card.Text>
                   <Card.Text>
-                    Departure: {flight.departureTime}, Arrival: {flight.arrivalTime}
+                    Departure: {flight.departureDate}, Return: {flight.returnDate}
                   </Card.Text>
                   <Card.Text>
                     Price: ${flight.price}{' '}

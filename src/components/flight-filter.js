@@ -15,17 +15,19 @@ function FlightFilter({setFlightFormData}) {
 
     // gather form input values
     const form = event.currentTarget;
-    const departure = form.elements["formDeparture"].value;
-    const destination = form.elements["formDestination"].value;
-    const departureDate = form.elements["formDepartureDate"].value;
-    const returnDate = form.elements["formReturnDate"].value;
-    const passengers = form.elements["formPassengers"].value;
-    const cabinClass = form.elements["formCabinClass"].value;
-    const directFlightsOnly = form.elements["formDirectFlightsOnly"].checked;
-    const flexibleDates = form.elements["formFlexibleDates"].checked;
-    const departureTime = form.elements["formDepartureTime"].value;
-    const minPrice = form.elements["formPriceRange"][0].value;
-    const maxPrice = form.elements["formPriceRange"][1].value;
+    const departure = form["formDeparture"].value;
+    console.log(form["formDeparture"].value)
+    const destination = form["formDestination"].value;
+    console.log(form["formDepartureDate"].value);
+    const departureDate = form["formDepartureDate"].value;
+    const returnDate = form["formReturnDate"].value;
+    // const passengers = form["formPassengers"].value;
+    // const cabinClass = form["formCabinClass"].value;
+    // const directFlightsOnly = form["formDirectFlightsOnly"].checked;
+    // const flexibleDates = form["formFlexibleDates"].checked;
+    // const departureTime = form["formDepartureTime"].value;
+    // const minPrice = form["formPriceRange"][0].value;
+    // const maxPrice = form["formPriceRange"][1].value;
 
         // TODO: Send the form data to the server to fetch flight search results
         // construct API request URL with form input values as parameters
@@ -51,7 +53,7 @@ function FlightFilter({setFlightFormData}) {
     };
 
     return (
-        <Form>
+        <Form onSubmit={(handleSubmit)}>
             <Row>
                 {/* Departure location input */}
                 <Form.Group className="col-md-3" controlId="formDeparture">
@@ -84,70 +86,16 @@ function FlightFilter({setFlightFormData}) {
                     </Form.Control>
                 </Form.Group>
             </Row>
-            {/* Extra filters dropdown */}
-            <Dropdown>
-                <Dropdown.Toggle className="col-md-4" variant="secondary" id="filter-dropdown">
-                    Additional Filters
-                </Dropdown.Toggle>
-                <Dropdown.Menu show={isOpen}>
-                    <Dropdown.Header>Filter by</Dropdown.Header>
-                    <Dropdown.Divider /> 
-                    {/* Cabin class input */}
-                     <Dropdown.Item>
-                        <Form.Group className="col-md-12" controlId="formCabinClass">
-                            <Form.Label>Cabin Class</Form.Label>
-                            <Form.Control as="select" onChange={(e) => e.stopPropagation()}>                                
-                                <option>Economy</option>
-                                <option>Premium Economy</option>
-                                <option>Business</option>
-                                <option>First Class</option>
-                            </Form.Control>
-                        </Form.Group>
-                    </Dropdown.Item>
-                    <Dropdown.Item> 
-                        {/* Direct Flights Only checkbox */}
-                         <Form.Group className="col-md-2" controlId="formDirectFlightsOnly">
-                            <Form.Label>Direct Flights Only</Form.Label>
-                            <Form.Check type="checkbox" label="" onChange={(e) => e.stopPropagation()} />
-                        </Form.Group>
-                    </Dropdown.Item>
-                    <Dropdown.Item> 
-                        {/* Flexible Dates checkbox */}
-                        <Form.Group className="col-md-2" controlId="formFlexibleDates">
-                            <Form.Label>Flexible Dates</Form.Label>
-                            <Form.Check type="checkbox" label="" onChange={(e) => e.stopPropagation()} />
-                        </Form.Group>
-                    </Dropdown.Item>
-                    <Dropdown.Item> 
-                        {/* Departure Time input */}
-                        <Form.Group className="col-md-12" controlId="formDepartureTime">
-                            <Form.Label>Departure Time</Form.Label>
-                            <Form.Control as="select" defaultValue="Any" onClick={(e) => e.stopPropagation()}>
-                                <option>Any</option>
-                                <option>Morning</option>
-                                <option>Afternoon</option>
-                                <option>Evening</option>
-                            </Form.Control>
-                        </Form.Group>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                        {/* Price Range input */}
-                        <Form.Group className="col-md-12" controlId="formPriceRange">
-                            <Form.Label>Price Range</Form.Label>
-                            <Form.Control type="number" placeholder="Min" onClick={(e) => e.stopPropagation()} />
-                            <Form.Control type="number" placeholder="Max" onClick={(e) => e.stopPropagation()} />
-                        </Form.Group>
-                    </Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
+        
+            
             {/* Submit button */}
-            <Button variant="primary" type="submit" onClick={handleSubmit}>
+            <Button variant="primary" type="submit">
                 Flight Search
             </Button>
         </Form>
     )
 
 };
-// FlightResults();
+
 export default FlightFilter;
 
