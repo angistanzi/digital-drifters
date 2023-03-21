@@ -1,0 +1,99 @@
+{
+    "historical": [
+        {
+          "name": "Rome",
+          "country": "Italy",
+          "id": 1,
+          "image": "https://example.com/john-smith.jpg"
+        },
+        {
+          "name": "Athens",
+          "country": "Greece",
+          "id": 2,
+          "image": "https://example.com/emma-lee.jpg"
+        },
+        {
+          "name": "Macchu Picchu",
+          "country": "Peru",
+          "id": 3,
+          "image": "https://example.com/hiroshi-tanaka.jpg"
+        },
+        {
+          "name": "Luxor",
+          "country": "Egypt",
+          "id": 4,
+          "image": "https://example.com/maria-rodriguez.jpg"
+        },
+        {
+          "name": "Angkor Wat",
+          "country": "Cambodia",
+          "id": 5,
+          "image": "https://example.com/anna-petrova.jpg"
+        }
+      ],
+      "outdoor": [
+        {
+          "name": "Vancouver",
+          "country": "Canada",
+          "id": 1,
+          "image": "https://example.com/john-smith.jpg"
+        },
+        {
+          "name": "Sydney",
+          "country": "Australia",
+          "id": 2,
+          "image": "https://example.com/emma-lee.jpg"
+        },
+        {
+          "name": "Denver",
+          "country": "Colorado, USA",
+          "id": 3,
+          "image": "https://example.com/hiroshi-tanaka.jpg"
+        },
+        {
+          "name": "Rio de Janeiro",
+          "country": "Brazil",
+          "id": 4,
+          "image": "https://example.com/maria-rodriguez.jpg"
+        },
+        {
+          "name": "Bali",
+          "country": "Indonesia",
+          "id": 5,
+          "image": "https://example.com/anna-petrova.jpg"
+        }
+      ],
+      "family": [
+        {
+          "name": "Orlando",
+          "country": "Florida, USA",
+          "id": 1,
+          "image": "https://example.com/john-smith.jpg"
+        },
+        {
+          "name": "Cape Town",
+          "country": "South Africa",
+          "id": 2,
+          "image": "https://example.com/emma-lee.jpg"
+        },
+        {
+          "name": "London",
+          "country": "England",
+          "id": 3,
+          "image": "https://example.com/hiroshi-tanaka.jpg"
+        },
+        {
+          "name": "Cancun",
+          "country": "Mexico",
+          "id": 4,
+          "image": "https://example.com/maria-rodriguez.jpg"
+        },
+        {
+          "name": "Maui",
+          "country": "Hawaii, USA",
+          "id": 5,
+          "image": "https://example.com/anna-petrova.jpg"
+        }
+      ]
+      
+}

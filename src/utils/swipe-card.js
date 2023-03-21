@@ -33,6 +33,7 @@ const db = [
 function Advanced () {
   const [currentIndex, setCurrentIndex] = useState(db.length - 1)
   const [lastDirection, setLastDirection] = useState()
+  const [citySuggest, setCitySuggest] = useState("");
   
   // used for outOfFrame closure
   const currentIndexRef = useRef(currentIndex)
