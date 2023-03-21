@@ -1,37 +1,52 @@
 
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";npm 
 import Navbar from "./components/navbar.jsx";
-import Home from "./components/home-page.js";
-import TravelInspo from "./components/travel-inspo.js";
-import FlightResults from "./components/flight-results.js";
+import Home from "./components/home-page.jsx";
+//import TravelInspo from "./components/travel-inspo.js";
+//import FlightResults from "./components/flight-results.js";
 
 
 // import FlightFilter from './components/flight-filter.js';
 // import Favorites from './components/favorite-list.js';
 
-import Favorites from "./components/favorite-list.js";
+//import Favorites from "./components/favorite-list.js";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+/* function App() {
   return (
     <Router>
       <div>
         <Navbar />
-        {/* Wrap Route elements in a Routes component */}
+      
         <Routes basename="/Digital-Drifters/">
-          {/* Define a default route that will render the Home component */}
+   
           <Route path="/" element={<Home />} />
-          {/* Define routes using the Route component to render different page components at different paths */}
+
           <Route path="/flight-results" element={<FlightResults />} />
           <Route path="/travel-inspo" element={<TravelInspo />} />
-          {/* Define a route that will have descendant routes */}
+
 
           <Route path="/favorite-list" element={<Favorites />} />
         </Routes>
       </div>
     </Router>
+  );
+} */
+
+function App() {
+  return (
+    
+      <div>
+        <Navbar />
+      
+   
+   
+      <Home />
+
+      </div>
+
   );
 }
 export default App;
