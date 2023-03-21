@@ -30,10 +30,9 @@ const db = [
 
 
 
-function Advanced () {
+function SwipeCard () {
   const [currentIndex, setCurrentIndex] = useState(db.length - 1)
   const [lastDirection, setLastDirection] = useState()
-  const [citySuggest, setCitySuggest] = useState("");
   
   // used for outOfFrame closure
   const currentIndexRef = useRef(currentIndex)
@@ -96,30 +95,31 @@ function Advanced () {
       />
       <h1 class="display-4 fw-bold mb-5">CHECK THESE OUT...</h1>
       <div className='cardContainer' id="attractions">
-        {db.map((character, index) => (
+        {db.map((suggestion, index) => (
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
-            key={character.location}
-            onSwipe={(dir) => swiped(dir, character.location, index)}
-            onCardLeftScreen={() => outOfFrame(character.location, index)}
+            key={suggestion.location}
+            onSwipe={(dir) => swiped(dir, suggestion.location, index)}
+            onCardLeftScreen={() => outOfFrame(suggestion.location, index)}
           >
             <div
-              style={{ backgroundImage: 'url(' + character.url + ')' }}
+              style={{ backgroundImage: 'url(' + suggestion.url + ')' }}
               className='card-swipe'
             >
-              <h3>{character.location}</h3>
+              <h3>{suggestion.location}</h3>
             </div>
           </TinderCard>
         ))}
       </div>
       <div className='buttons'>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>Skip!</button>
-        <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo swipe!</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Add to favorites!</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>Skip</button>
+        <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo swipe</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Add to favorites</button>
       </div>
+     
     </div>
   )
 }
 
-export default Advanced
+export default SwipeCard;
