@@ -114,19 +114,10 @@ function Advanced () {
         ))}
       </div>
       <div className='buttons'>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>Swipe left!</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>Skip!</button>
         <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo swipe!</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Swipe right!</button>
+        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Add to favorites!</button>
       </div>
-      {lastDirection ? (
-        <h2 key={lastDirection} className='infoText'>
-          You swiped {lastDirection}
-        </h2>
-      ) : (
-        <h2 className='infoText'>
-          Swipe right to add to favorites, and swipe left to see more!
-        </h2>
-      )}
     </div>
   )
 }
