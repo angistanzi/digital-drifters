@@ -5,40 +5,9 @@ import './swipe-card.css'
 import swipecards from '../assets/swipe-cards.json'
 
 
-const db = [{
-  "location": "Rome",
-  "country": "Italy",
-  "id": 187791,
-  "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/c9/6c/08/caption.jpg"
-},
-{
-  "location": "Athens",
-  "country": "Greece",
-  "id": 189400,
-  "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/c0/98/c5/caption.jpg"
-},
-{
-  "location": "Macchu Picchu",
-  "country": "Peru",
-  "id": 20274142,
-  "url": "https://media-cdn.tripadvisor.com/media/photo-o/1b/15/16/91/caption.jpg"
-},
-{
-  "location": "Luxor",
-  "country": "Egypt",
-  "id": 294205,
-  "url": "https://media-cdn.tripadvisor.com/media/photo-b/2560x500/15/33/fb/a0/luxor.jpg"
-},
-{
-  "location": "Siem Reap",
-  "country": "Cambodia",
-  "id": 297390,
-  "url": "https://media-cdn.tripadvisor.com/media/photo-b/2560x500/15/33/fc/e0/siem-reap.jpg"
-}];
 
-
-function SwipeCard () {
-  const [currentIndex, setCurrentIndex] = useState(db.length - 1)
+function SwipeCard (props) {
+  const [currentIndex, setCurrentIndex] = useState(swipecards[props.category].length - 1)
   const [lastDirection, setLastDirection] = useState()
   
 
@@ -47,23 +16,24 @@ function SwipeCard () {
 
   const childRefs = useMemo(
     () =>
-      Array(db.length)
+      Array(swipecards[props.category].length)
         .fill(0)
         .map((i) => React.createRef()),
-    []
+    [props.category]
   );
 
   const updateCurrentIndex = (val) => {
+    console.log(val)
     setCurrentIndex(val);
     currentIndexRef.current = val;
   };
 
-  const canGoBack = currentIndex < db.length - 1;
+  const canGoBack = currentIndex < swipecards[props.category].length - 1;
 
   const canSwipe = currentIndex >= 0;
 
   // set last direction and decrease current index
-  const swiped = (direction, nameToDelete, index) => {
+  const swiped = (direction, suggestion, index) => {
     setLastDirection(direction);
     updateCurrentIndex(index - 1);
   };
@@ -81,7 +51,11 @@ function SwipeCard () {
   };
 
   const swipe = async (dir) => {
-    if (canSwipe && currentIndex < db.length) {
+    console.log(childRefs)
+    console.log(childRefs[currentIndex])
+    console.log(currentIndex);
+    if (canSwipe && currentIndex < swipecards[props.category].length) {
+        console.log(childRefs[currentIndex].current)
       await childRefs[currentIndex].current.swipe(dir); // Swipe the card!
     }
   };
@@ -90,6 +64,7 @@ function SwipeCard () {
   const goBack = async () => {
     if (!canGoBack) return;
     const newIndex = currentIndex + 1;
+    console.log(newIndex)
     updateCurrentIndex(newIndex);
     await childRefs[newIndex].current.restoreCard();
   };
@@ -104,14 +79,14 @@ function SwipeCard () {
         href="https://fonts.googleapis.com/css?family=Alatsi&display=swap"
         rel="stylesheet"
       />
-      <h1 class="display-4 fw-bold mb-5">CHECK THESE OUT...</h1>
+      <h1 className="display-4 fw-bold mb-5">CHECK THESE OUT...</h1>
       <div className='cardContainer' id="attractions">
-        {db.map((suggestion, index) => (
+        {swipecards[props.category].map((suggestion, index) => (
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
-            key={suggestion.location}
-            onSwipe={(dir) => swiped(dir, suggestion.location, index)}
+            key={suggestion.id}
+            onSwipe={(dir) => swiped(dir, suggestion, index)}
             onCardLeftScreen={() => outOfFrame(suggestion.location, index)}
           >
             <div
@@ -128,9 +103,19 @@ function SwipeCard () {
         <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo swipe</button>
         <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Add to favorites</button>
       </div>
+      {lastDirection ? (
+        <h2 key={lastDirection} className='infoText'>
+          You swiped {lastDirection}
+        </h2>
+      ) : (
+        <h2 className='infoText'>
+          Swipe right to add to favorites, and swipe left to see more!
+        </h2>
+      )}
      
     </div>
   );
 }
+
 
 export default SwipeCard;
