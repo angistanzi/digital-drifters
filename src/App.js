@@ -6,9 +6,7 @@ import TravelInspo from "./components/travel-inspo.js";
 import FlightResults from "./components/flight-results.js";
 
 
-// import FlightFilter from './components/flight-filter.js';
-// import Favorites from './components/favorite-list.js';
-
+import FlightFilter from './components/flight-filter.js';
 import Favorites from "./components/favorite-list.js";
 
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -9,4 +9,18 @@
     padding: 10px;
 }
 
- 
+.gradientDiv {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      80%,
+      rgb(0, 0, 0, 1)
+    );
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .card-title {
+    margin-bottom: 0px !important;
+  }
