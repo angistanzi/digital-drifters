@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Form, Card, Button } from "react-bootstrap";
-import "./favorite-list.css";
+import { NavLink } from "react-router-dom";
 import { getCityData } from "../utils/API";
+import "./favorite-list.css";
 
 // book flight button linked to flight component.
 // Add a counter on visited cities.
@@ -27,11 +28,13 @@ function Favorites() {
     event.preventDefault();
     // Calling the getCityData function
     // from the API.js to get some data for the entered city.
-    getCityData(cityName).then((cityData) => {
-      // Adding the city data to the array of
-      // visited cities using the spread operator.
-      setVisitedCities([...visitedCities, cityData]);
-    });
+    getCityData(cityName)
+      .then((cityData) => {
+        // Adding the city data to the array of
+        // visited cities using the spread operator.
+        setVisitedCities([...visitedCities, cityData]);
+      })
+      .catch(() => alert("Please try again"));
     // Clearing the input field after the city has been added.
     setCityName("");
   };
@@ -59,6 +62,13 @@ function Favorites() {
         <Col lg="5">
           <div className="text-center mb-5">
             <h2>Places I've been</h2>
+            {visitedCities.length === 0 ? (
+              <h5>You haven't visited any cities yet!</h5>
+            ) : visitedCities.length === 1 ? (
+              <h5>{`So far you've visited ${visitedCities.length} city!`}</h5>
+            ) : (
+              <h5>{`So far you've visited ${visitedCities.length} cities!`}</h5>
+            )}
           </div>
 
           {visitedCities.slice(0, cardsToRender).map((city) => {
@@ -111,7 +121,15 @@ function Favorites() {
               <div className="d-inline-flex justify-content-between">
                 <Card.Title>Tokyo, Japan</Card.Title>
                 <Button variant="warning" size="sm">
-                  Book flights
+                  <NavLink
+                    to="/flight-results"
+                    // When the NavLink is active, the "active" class is added.
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                  >
+                    Book flights
+                  </NavLink>
                 </Button>
               </div>
             </Card.ImgOverlay>
@@ -127,7 +145,15 @@ function Favorites() {
               <div className="d-inline-flex justify-content-between">
                 <Card.Title>Shanghai, China</Card.Title>
                 <Button variant="warning" size="sm">
-                  Book flights
+                  <NavLink
+                    to="/flight-results"
+                    // When the NavLink is active, the "active" class is added.
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                  >
+                    Book flights
+                  </NavLink>
                 </Button>
               </div>
             </Card.ImgOverlay>
@@ -143,7 +169,15 @@ function Favorites() {
               <div className="d-inline-flex justify-content-between">
                 <Card.Title>Taipei, Taiwan</Card.Title>
                 <Button variant="warning" size="sm">
-                  Book flights
+                  <NavLink
+                    to="/flight-results"
+                    // When the NavLink is active, the "active" class is added.
+                    className={({ isActive }) =>
+                      isActive ? "nav-link active" : "nav-link"
+                    }
+                  >
+                    Book flights
+                  </NavLink>
                 </Button>
               </div>
             </Card.ImgOverlay>

@@ -17,14 +17,22 @@ export const getCityData = (cityName) => {
     .then((response) => {
       console.log(response);
       // Extracting relevant city data from the response and return it as an smaller object.
+      const { name, ancestors, location_id, photo } =
+        response.data[0].result_object;
+      const country = ancestors.find((ancestor) => {
+        return ancestor.subcategory[0].key === "country";
+      });
+      const image = photo.images.original.url;
+
+      if (!name || !country || !location_id || !image) {
+        throw new Error("Please try again");
+      }
+
       return {
-        name: response.data[0].result_object.name,
-        country: response.data[0].result_object.ancestors.find((ancestor) => {
-          return ancestor.subcategory[0].key === "country";
-        }).name,
-        id: response.data[0].result_object.location_id,
-        image: response.data[0].result_object.photo.images.original.url,
+        name,
+        country: country.name,
+        id: location_id,
+        image,
       };
-    })
-    .catch((err) => console.error(err));
+    });
 };
