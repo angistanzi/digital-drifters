@@ -6,7 +6,7 @@ import logoImg from '../assets/logo.png';
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-secondary" style={{ height: "80px" }}>
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand" href="home-page.jsx">
         <img src={logoImg} alt="logo" height="50" />
       </a>
       <div className="collapse navbar-collapse" id="navbarNav">
