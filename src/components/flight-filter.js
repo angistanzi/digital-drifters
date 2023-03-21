@@ -42,6 +42,7 @@ function FlightFilter({setFlightFormData}) {
         } catch (error) {
             console.error(error);
             // TODO: Handle the error appropriately (e.g. show a message to the user)
+            alert("An error occurred while fetching flight data. Please try again later.");
         }
     };
 
