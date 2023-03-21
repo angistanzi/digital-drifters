@@ -10,7 +10,8 @@ import "./favorite-list.css";
 function Favorites() {
   // Defining state variables using the useState hook.
   const [cityName, setCityName] = useState("");
-  const [cardsToRender, setCardsToRender] = useState(5);
+  const [visitedCardsToRender, setVisitedCardsToRender] = useState(5);
+  const [favCardsToRender, setFavCardsToRender] = useState(5);
   const [visitedCities, setVisitedCities] = useState(
     // Getting the array of visited cities from local storage,
     // or start it with an empty array if it doesn't exist yet.
@@ -22,6 +23,12 @@ function Favorites() {
   useEffect(() => {
     localStorage.setItem("visitedCities", JSON.stringify(visitedCities));
   }, [visitedCities]);
+
+  const [savedCities] = useState(
+    // Getting the array of saved cities from local storage,
+    // or start it with an empty array if it doesn't exist yet.
+    JSON.parse(localStorage.getItem("savedCities")) || []
+  );
 
   // Defining a function to handle a form submission.
   const handleSubmit = (event) => {
@@ -71,7 +78,7 @@ function Favorites() {
             )}
           </div>
 
-          {visitedCities.slice(0, cardsToRender).map((city) => {
+          {visitedCities.slice(0, visitedCardsToRender).map((city) => {
             return (
               <Card key={city.id} className="cityCard text-white">
                 <Card.Img
@@ -92,11 +99,11 @@ function Favorites() {
             );
           })}
 
-          {cardsToRender >= visitedCities.length ? null : (
+          {visitedCardsToRender >= visitedCities.length ? null : (
             <div className="text-center my-3">
               <Button
                 onClick={() => {
-                  setCardsToRender(cardsToRender + 5);
+                  setVisitedCardsToRender(visitedCardsToRender + 5);
                 }}
                 variant="light"
               >
@@ -109,79 +116,55 @@ function Favorites() {
         <Col lg="5">
           <div className="text-center mb-5">
             <h2>Places I want to go</h2>
+            {savedCities.length === 0 ? (
+              <h5>You haven't any saved cities yet.</h5>
+            ) : savedCities.length === 1 ? (
+              <h5>{`So far you want to visit ${savedCities.length} city!`}</h5>
+            ) : (
+              <h5>{`So far you want to visit ${savedCities.length} cities!`}</h5>
+            )}
           </div>
-          <Card className="cityCard text-white">
-            <Card.Img
-              src="https://media-cdn.tripadvisor.com/media/photo-s/27/84/4b/d7/caption.jpg"
-              alt="Card image"
-            />
-            <div className="gradientDiv"></div>
 
-            <Card.ImgOverlay className="d-flex flex-column justify-content-end">
-              <div className="d-inline-flex justify-content-between">
-                <Card.Title>Tokyo, Japan</Card.Title>
-                <Button variant="warning" size="sm">
-                  <NavLink
-                    to="/flight-results"
-                    // When the NavLink is active, the "active" class is added.
-                    className={({ isActive }) =>
-                      isActive ? "nav-link active" : "nav-link"
-                    }
-                  >
-                    Book flights
-                  </NavLink>
-                </Button>
-              </div>
-            </Card.ImgOverlay>
-          </Card>
-          <Card className="cityCard text-white">
-            <Card.Img
-              src="https://media-cdn.tripadvisor.com/media/photo-s/0f/68/4f/4e/photo0jpg.jpg"
-              alt="Card image"
-            />
-            <div className="gradientDiv"></div>
+          {savedCities.slice(0, favCardsToRender).map((city) => {
+            return (
+              <Card key={city.id} className="cityCard text-white">
+                <Card.Img
+                  src={city.url}
+                  alt={`${city.location}, ${city.country}`}
+                />
+                <div className="gradientDiv"></div>
 
-            <Card.ImgOverlay className="d-flex flex-column justify-content-end">
-              <div className="d-inline-flex justify-content-between">
-                <Card.Title>Shanghai, China</Card.Title>
-                <Button variant="warning" size="sm">
-                  <NavLink
-                    to="/flight-results"
-                    // When the NavLink is active, the "active" class is added.
-                    className={({ isActive }) =>
-                      isActive ? "nav-link active" : "nav-link"
-                    }
-                  >
-                    Book flights
-                  </NavLink>
-                </Button>
-              </div>
-            </Card.ImgOverlay>
-          </Card>
-          <Card className="cityCard text-white">
-            <Card.Img
-              src="https://media-cdn.tripadvisor.com/media/photo-s/1b/33/f3/33/caption.jpg"
-              alt="Card image"
-            />
-            <div className="gradientDiv"></div>
-
-            <Card.ImgOverlay className="d-flex flex-column justify-content-end">
-              <div className="d-inline-flex justify-content-between">
-                <Card.Title>Taipei, Taiwan</Card.Title>
-                <Button variant="warning" size="sm">
-                  <NavLink
-                    to="/flight-results"
-                    // When the NavLink is active, the "active" class is added.
-                    className={({ isActive }) =>
-                      isActive ? "nav-link active" : "nav-link"
-                    }
-                  >
-                    Book flights
-                  </NavLink>
-                </Button>
-              </div>
-            </Card.ImgOverlay>
-          </Card>
+                <Card.ImgOverlay className="d-flex flex-column justify-content-end">
+                  <div className="d-inline-flex justify-content-between">
+                    <Card.Title>{`${city.location}, ${city.country}`}</Card.Title>
+                    <Button variant="warning" size="sm">
+                      <NavLink
+                        to="/flight-results"
+                        // When the NavLink is active, the "active" class is added.
+                        className={({ isActive }) =>
+                          isActive ? "nav-link active" : "nav-link"
+                        }
+                      >
+                        Book flights
+                      </NavLink>
+                    </Button>
+                  </div>
+                </Card.ImgOverlay>
+              </Card>
+            );
+          })}
+          {favCardsToRender >= savedCities.length ? null : (
+            <div className="text-center my-3">
+              <Button
+                onClick={() => {
+                  setFavCardsToRender(favCardsToRender + 5);
+                }}
+                variant="light"
+              >
+                Show me more
+              </Button>
+            </div>
+          )}
         </Col>
       </Row>
     </Container>

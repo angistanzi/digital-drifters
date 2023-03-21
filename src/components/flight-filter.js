@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Form, Row, Dropdown } from "react-bootstrap";
-
 import { Button } from 'react-bootstrap';
 import FlightResults from "./flight-results.js";
 
 function FlightFilter({setFlightFormData}) {
     const [isOpen, setIsOpen] = useState(false);
-    // const [flightFilter, setFlightResults] = useState([]);
 
 
   // make the flight search button call the information requested
@@ -15,41 +13,41 @@ function FlightFilter({setFlightFormData}) {
 
     // gather form input values
     const form = event.currentTarget;
-    const departure = form["formDeparture"].value;
-    console.log(form["formDeparture"].value)
-    const destination = form["formDestination"].value;
-    console.log(form["formDepartureDate"].value);
-    const departureDate = form["formDepartureDate"].value;
-    const returnDate = form["formReturnDate"].value;
-    // const passengers = form["formPassengers"].value;
-    // const cabinClass = form["formCabinClass"].value;
-    // const directFlightsOnly = form["formDirectFlightsOnly"].checked;
-    // const flexibleDates = form["formFlexibleDates"].checked;
-    // const departureTime = form["formDepartureTime"].value;
-    // const minPrice = form["formPriceRange"][0].value;
-    // const maxPrice = form["formPriceRange"][1].value;
+    const departure = form.elements["formDeparture"].value;
+    const destination = form.elements["formDestination"].value;
+    const departureDate = form.elements["formDepartureDate"].value;
+    const returnDate = form.elements["formReturnDate"].value;
+    const passengers = form.elements["formPassengers"].value;
+    const cabinClass = form.elements["formCabinClass"].value;
+    const directFlightsOnly = form.elements["formDirectFlightsOnly"].checked;
+    const flexibleDates = form.elements["formFlexibleDates"].checked;
+    const departureTime = form.elements["formDepartureTime"].value;
+    const minPrice = form.elements["formPriceRange"][0].value;
+    const maxPrice = form.elements["formPriceRange"][1].value;
 
-        // TODO: Send the form data to the server to fetch flight search results
-        // construct API request URL with form input values as parameters
-        const apiKey = "c0b475d5b9mshe4e202547ee2d89p180241jsn4882db8fe45c";
-        const apiUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${departure}-sky/${destination}-sky/${departureDate}?inboundpartialdate=${returnDate}`;
+        try {
+            const apiKey = "c0b475d5b9mshe4e202547ee2d89p180241jsn4882db8fe45c";
+            const apiUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${departure}-sky/${destination}-sky/${departureDate}?inboundpartialdate=${returnDate}`;
 
-        fetch(apiUrl, {
-            method: "GET",
-            headers: {
-                "x-rapidapi-key": apiKey,
-                "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-            },
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                // TODO: Update state with the retrieved flight search results
-                setFlightFormData(data);
-            })
-            .catch((error) => {
-                console.error(error);
+            const response = await fetch(apiUrl, {
+                method: "GET",
+                headers: {
+                    "x-rapidapi-key": apiKey,
+                    "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
+                },
             });
+
+            if (!response.ok) {
+                throw new Error(response.status);
+            }
+
+            const data = await response.json();
+            setFlightFormData(data);
+        } catch (error) {
+            console.error(error);
+            // TODO: Handle the error appropriately (e.g. show a message to the user)
+            alert("An error occurred while fetching flight data. Please try again later.");
+        }
     };
 
     return (

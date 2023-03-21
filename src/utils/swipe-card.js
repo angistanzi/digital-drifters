@@ -1,15 +1,13 @@
+import React, { useState, useRef, useMemo } from "react";
+import TinderCard from "react-tinder-card";
+import "./swipe-card.css";
+import swipecards from "../assets/swipe-cards.json";
 
-import React, { useState, useRef, useMemo } from 'react'
-import TinderCard from 'react-tinder-card' 
-import './swipe-card.css' 
-import swipecards from '../assets/swipe-cards.json'
-
-
-
-function SwipeCard (props) {
-  const [currentIndex, setCurrentIndex] = useState(swipecards[props.category].length - 1)
-  const [lastDirection, setLastDirection] = useState()
-  
+function SwipeCard(props) {
+  const [currentIndex, setCurrentIndex] = useState(
+    swipecards[props.category].length - 1
+  );
+  const [lastDirection, setLastDirection] = useState();
 
   // used for outOfFrame closure
   const currentIndexRef = useRef(currentIndex);
@@ -23,7 +21,7 @@ function SwipeCard (props) {
   );
 
   const updateCurrentIndex = (val) => {
-    console.log(val)
+    console.log(val);
     setCurrentIndex(val);
     currentIndexRef.current = val;
   };
@@ -36,6 +34,13 @@ function SwipeCard (props) {
   const swiped = (direction, suggestion, index) => {
     setLastDirection(direction);
     updateCurrentIndex(index - 1);
+    if (direction === "right") {
+      const savedCities = JSON.parse(localStorage.getItem("savedCities")) || [];
+      localStorage.setItem(
+        "savedCities",
+        JSON.stringify([suggestion, ...savedCities])
+      );
+    }
   };
 
   const outOfFrame = (location, idx) => {
@@ -51,11 +56,11 @@ function SwipeCard (props) {
   };
 
   const swipe = async (dir) => {
-    console.log(childRefs)
-    console.log(childRefs[currentIndex])
+    console.log(childRefs);
+    console.log(childRefs[currentIndex]);
     console.log(currentIndex);
     if (canSwipe && currentIndex < swipecards[props.category].length) {
-        console.log(childRefs[currentIndex].current)
+      console.log(childRefs[currentIndex].current);
       await childRefs[currentIndex].current.swipe(dir); // Swipe the card!
     }
   };
@@ -64,7 +69,7 @@ function SwipeCard (props) {
   const goBack = async () => {
     if (!canGoBack) return;
     const newIndex = currentIndex + 1;
-    console.log(newIndex)
+    console.log(newIndex);
     updateCurrentIndex(newIndex);
     await childRefs[newIndex].current.restoreCard();
   };
@@ -80,42 +85,55 @@ function SwipeCard (props) {
         rel="stylesheet"
       />
       <h1 className="display-4 fw-bold mb-5">CHECK THESE OUT...</h1>
-      <div className='cardContainer' id="attractions">
+      <div className="cardContainer" id="attractions">
         {swipecards[props.category].map((suggestion, index) => (
           <TinderCard
             ref={childRefs[index]}
-            className='swipe'
+            className="swipe"
             key={suggestion.id}
             onSwipe={(dir) => swiped(dir, suggestion, index)}
             onCardLeftScreen={() => outOfFrame(suggestion.location, index)}
           >
             <div
-              style={{ backgroundImage: 'url(' + suggestion.url + ')' }}
-              className='card-swipe'
+              style={{ backgroundImage: "url(" + suggestion.url + ")" }}
+              className="card-swipe"
             >
               <h3>{suggestion.location}</h3>
             </div>
           </TinderCard>
         ))}
       </div>
-      <div className='buttons'>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('left')}>Skip</button>
-        <button style={{ backgroundColor: !canGoBack && '#c3c4d3' }} onClick={() => goBack()}>Undo swipe</button>
-        <button style={{ backgroundColor: !canSwipe && '#c3c4d3' }} onClick={() => swipe('right')}>Add to favorites</button>
+      <div className="buttons">
+        <button
+          style={{ backgroundColor: !canSwipe && "#c3c4d3" }}
+          onClick={() => swipe("left")}
+        >
+          Skip
+        </button>
+        <button
+          style={{ backgroundColor: !canGoBack && "#c3c4d3" }}
+          onClick={() => goBack()}
+        >
+          Undo swipe
+        </button>
+        <button
+          style={{ backgroundColor: !canSwipe && "#c3c4d3" }}
+          onClick={() => swipe("right")}
+        >
+          Add to favorites
+        </button>
       </div>
       {lastDirection ? (
-        <h2 key={lastDirection} className='infoText'>
+        <h2 key={lastDirection} className="infoText">
           You swiped {lastDirection}
         </h2>
       ) : (
-        <h2 className='infoText'>
+        <h2 className="infoText">
           Swipe right to add to favorites, and swipe left to see more!
         </h2>
       )}
-     
     </div>
   );
 }
-
 
 export default SwipeCard;

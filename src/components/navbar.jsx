@@ -1,15 +1,26 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logoImg from '../assets/logo.png';
-
+import 'bootstrap/dist/js/bootstrap.js';
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-secondary" style={{ height: "80px" }}>
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand" href="home-page.jsx">
         <img src={logoImg} alt="logo" height="50" />
       </a>
-      <div className="collapse navbar-collapse" id="navbarNav">
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse ml-auto justify-content-end" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
             <a className="nav-link" href="/travel-inspo">Travel Inspiration</a>
@@ -27,6 +38,7 @@ function Navbar() {
 }
 
 export default Navbar;
+
 
 
 
