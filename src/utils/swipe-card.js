@@ -133,4 +133,5 @@ function SwipeCard () {
   );
 }
 
+
 export default SwipeCard;
