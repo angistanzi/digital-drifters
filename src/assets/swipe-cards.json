@@ -1,0 +1,130 @@
+{
+    "historical": [
+        {
+          "location": "Rome",
+          "country": "Italy",
+          "id": 187791,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/c9/6c/08/caption.jpg"
+        },
+        {
+          "location": "Athens",
+          "country": "Greece",
+          "id": 189400,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/c0/98/c5/caption.jpg"
+        },
+        {
+          "location": "Macchu Picchu",
+          "country": "Peru",
+          "id": 20274142,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-o/1b/15/16/91/caption.jpg"
+        },
+        {
+          "location": "Luxor",
+          "country": "Egypt",
+          "id": 294205,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-b/2560x500/15/33/fb/a0/luxor.jpg"
+        },
+        {
+          "location": "Siem Reap",
+          "country": "Cambodia",
+          "id": 297390,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-b/2560x500/15/33/fc/e0/siem-reap.jpg"
+        }
+      ],
+      "outdoor": [
+        {
+          "location": "Vancouver",
+          "country": "Canada",
+          "id": 154943,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-o/1c/cc/d6/65/caption.jpg"
+        },
+        {
+          "location": "Sydney",
+          "country": "Australia",
+          "id": 255060,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/27/84/4c/88/caption.jpg"
+        },
+        {
+          "location": "Denver",
+          "country": "United States",
+          "id": 33388,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/c7/27/eb/caption.jpg"
+        },
+        {
+          "location": "Rio de Janeiro",
+          "country": "Brazil",
+          "id": 303506,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/33/f4/3d/caption.jpg"
+        },
+        {
+          "location": "Bali",
+          "country": "Indonesia",
+          "id": 294226,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/4b/5e/c2/caption.jpg"
+        }
+      ],
+      "family": [
+        {
+          "location": "Orlando",
+          "country": "United States",
+          "id": 34515,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/c0/b2/d2/caption.jpg"
+        },
+        {
+          "location": "Cape Town",
+          "country": "South Africa",
+          "id": 1722390,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-c/2560x500/14/10/2e/1e/cape-town.jpg"
+        },
+        {
+          "location": "London",
+          "country": "England",
+          "id": 186338,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/c0/b1/4b/caption.jpg"
+        },
+        {
+          "location": "Cancun",
+          "country": "Mexico",
+          "id": 150807,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-w/1c/ae/5d/ec/caption.jpg"
+        },
+        {
+          "location": "Maui",
+          "country": "United States",
+          "id": 29220,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1c/cc/d8/b8/caption.jpg"
+        }
+      ],
+      "random": [
+        {
+          "location": "Barcelona",
+          "country": "Spain",
+          "id": 187497,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/28/5f/12/72/caption.jpg"
+        },
+        {
+          "location": "Copenhagen",
+          "country": "Denmark",
+          "id": 189541,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/28/74/c2/dc/caption.jpg"
+        },
+        {
+          "location": "Berlin",
+          "country": "Germany",
+          "id": 187323,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/33/f5/c6/caption.jpg"
+        },
+        {
+          "location": "Phuket",
+          "country": "Thailand",
+          "id": 293920,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1b/4b/5d/c8/caption.jpg"
+        },
+        {
+          "location": "Amsterdam",
+          "country": "Netherlands",
+          "id": 188590,
+          "url": "https://media-cdn.tripadvisor.com/media/photo-m/1280/28/74/c9/cf/caption.jpg"
+        }
+      ]
+}

@@ -12,7 +12,9 @@ code {
     monospace;
 }
 
-
+#inspo-image{
+  max-height: 180px;
+}
 
 /*lily css*/
 body {

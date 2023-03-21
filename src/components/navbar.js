@@ -15,7 +15,7 @@ function Navbar() {
             <a className="nav-link" href="/travel-inspo">Travel Inspiration</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/flight-results">Flight Results</a>
+            <a className="nav-link" href="/flight-results">Flight Search</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/favorite-list">Favorites</a>
