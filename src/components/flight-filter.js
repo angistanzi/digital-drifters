@@ -4,9 +4,9 @@ import { Form, Row, Dropdown } from "react-bootstrap";
 import { Button } from 'react-bootstrap';
 import FlightResults from "./flight-results.js";
 
-function FlightFilter() {
+function FlightFilter({setFlightFormData}) {
     const [isOpen, setIsOpen] = useState(false);
-    const [flightFilter, setFlightResults] = useState([]);
+    // const [flightFilter, setFlightResults] = useState([]);
 
 
   // make the flight search button call the information requested
@@ -43,7 +43,7 @@ function FlightFilter() {
             .then((data) => {
                 console.log(data);
                 // TODO: Update state with the retrieved flight search results
-                setFlightResults(data);
+                setFlightFormData(data);
             })
             .catch((error) => {
                 console.error(error);
@@ -96,7 +96,8 @@ function FlightFilter() {
                      <Dropdown.Item>
                         <Form.Group className="col-md-12" controlId="formCabinClass">
                             <Form.Label>Cabin Class</Form.Label>
-                            <Form.Control as="select" onChange={(e) => e.stopPropagation()}>                                <option>Economy</option>
+                            <Form.Control as="select" onChange={(e) => e.stopPropagation()}>                                
+                                <option>Economy</option>
                                 <option>Premium Economy</option>
                                 <option>Business</option>
                                 <option>First Class</option>
@@ -147,6 +148,6 @@ function FlightFilter() {
     )
 
 };
-FlightResults();
+// FlightResults();
 export default FlightFilter;
 

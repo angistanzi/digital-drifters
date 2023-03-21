@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar.jsx';
-// import Home from './components/home-page.js';
+import Navbar from './components/navbar.js';
+import HomePage from './components/home-page.js';
 import TravelInspo from './components/travel-inspo.js';
 import FlightFilter from './components/flight-filter';
+import FlightResults from './components/flight-results.js';
 
 import Favorites from "./components/favorite-list.js";
 
@@ -20,12 +21,10 @@ function App() {
       
         <Routes basename="/Digital-Drifters/">
    
-          <Route path="/" element={<Home />} />
-
+          <Route path="/" element={<HomePage />} />
 
           <Route path="/flight-results" element={<FlightResults />} />
           <Route path="/travel-inspo" element={<TravelInspo />} />
-
 
           <Route path="/favorite-list" element={<Favorites />} />
         </Routes>
