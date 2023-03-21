@@ -20,7 +20,7 @@ function Navbar() {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div className="collapse navbar-collapse ml-auto justify-content-end" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
             <a className="nav-link" href="/travel-inspo">Travel Inspiration</a>
