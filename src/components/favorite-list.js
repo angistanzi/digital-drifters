@@ -62,6 +62,13 @@ function Favorites() {
         <Col lg="5">
           <div className="text-center mb-5">
             <h2>Places I've been</h2>
+            {visitedCities.length === 0 ? (
+              <h5>You haven't visited any cities yet!</h5>
+            ) : visitedCities.length === 1 ? (
+              <h5>{`So far you've visited ${visitedCities.length} city!`}</h5>
+            ) : (
+              <h5>{`So far you've visited ${visitedCities.length} cities!`}</h5>
+            )}
           </div>
 
           {visitedCities.slice(0, cardsToRender).map((city) => {
