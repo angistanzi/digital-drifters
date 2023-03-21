@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import FlightFilter from './flight-filter.js';
 
-function FlightResults({ FlightFilter }) {
+function FlightResults() {
+  const [flightFormData, setFlightFormData] = useState([])
     // if (!FlightFilter) {
     //     return null;
     //   }
   return (
     <div>
-      <FlightFilter />
+      <FlightFilter setFlightFormData={setFlightFormData}/>
       <Container className="my-4">
         <Row xs={1} sm={2} lg={3} className="g-4">
-          {FlightFilter.map((flight, index) => (
+          {flightFormData.map((flight, index) => (
             <Col key={index}>
               <Card>
                 <Card.Body>
