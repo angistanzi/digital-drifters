@@ -10,7 +10,8 @@ import "./favorite-list.css";
 function Favorites() {
   // Defining state variables using the useState hook.
   const [cityName, setCityName] = useState("");
-  const [cardsToRender, setCardsToRender] = useState(5);
+  const [visitedCardsToRender, setVisitedCardsToRender] = useState(5);
+  const [favCardsToRender, setFavCardsToRender] = useState(5);
   const [visitedCities, setVisitedCities] = useState(
     // Getting the array of visited cities from local storage,
     // or start it with an empty array if it doesn't exist yet.
@@ -77,7 +78,7 @@ function Favorites() {
             )}
           </div>
 
-          {visitedCities.slice(0, cardsToRender).map((city) => {
+          {visitedCities.slice(0, visitedCardsToRender).map((city) => {
             return (
               <Card key={city.id} className="cityCard text-white">
                 <Card.Img
@@ -98,11 +99,11 @@ function Favorites() {
             );
           })}
 
-          {cardsToRender >= visitedCities.length ? null : (
+          {visitedCardsToRender >= visitedCities.length ? null : (
             <div className="text-center my-3">
               <Button
                 onClick={() => {
-                  setCardsToRender(cardsToRender + 5);
+                  setVisitedCardsToRender(visitedCardsToRender + 5);
                 }}
                 variant="light"
               >
@@ -124,7 +125,7 @@ function Favorites() {
             )}
           </div>
 
-          {savedCities.map((city) => {
+          {savedCities.slice(0, favCardsToRender).map((city) => {
             return (
               <Card key={city.id} className="cityCard text-white">
                 <Card.Img
@@ -152,6 +153,18 @@ function Favorites() {
               </Card>
             );
           })}
+          {favCardsToRender >= savedCities.length ? null : (
+            <div className="text-center my-3">
+              <Button
+                onClick={() => {
+                  setFavCardsToRender(favCardsToRender + 5);
+                }}
+                variant="light"
+              >
+                Show me more
+              </Button>
+            </div>
+          )}
         </Col>
       </Row>
     </Container>
