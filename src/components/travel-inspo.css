@@ -2,6 +2,10 @@
   max-height: 180px;
   object-fit: cover;
 }
+.btn-custom{
+  background-color: #F4E04D;
+  color: black;
+}
 
 #suggestion {
   max-height: 400px;

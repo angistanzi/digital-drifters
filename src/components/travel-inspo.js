@@ -1,107 +1,122 @@
 import { React, useState } from "react";
-import "../components/travel-inspo.css";
+// import css from '../assets/travel-inspo.css'
 import historical from "../assets/ruins.jpg";
 import outdoors from "../assets/outdoors.jpg";
 import familyfun from "../assets/familyfun.jpg";
 import random from "../assets/random.jpg";
 import SwipeCard from "../utils/swipe-card";
-import { CardGroup, Card, Button } from "react-bootstrap";
 
+// Fetch request for each card to pull cities with respective attractions when button is clicked
+// Need to append those results to display into swipe cards
 function TravelInspo() {
   const [currentCategory, setCurrentCategory] = useState();
 
   return (
-    <div className="container travel-inspo my-5">
-      <div className="container travel-inspo my-5">
-        <h1 id="travelHeader" className="text-center display-4 fw-bold mb-5">
-          ✨DESTINATION INSPIRATION✨
+    <div className="container travel-inspo" style={{ paddingTop: 30 }}>
+      <header>
+        <h1 id="travelHeader" className="display-4 fw-bold mb-5">
+          DESTINATION INSPIRATION✨
         </h1>
-        <CardGroup className="mb-5">
-          <Card key="1" className="categoryCard text-white mx-1">
-            <Card.Img src={historical} alt="historical image" />
-            <div className="gradientDiv"></div>
-
-            <Card.ImgOverlay className="d-flex flex-column justify-content-end">
-              <div className="d-inline-flex justify-content-between">
-                <Card.Title>HISTORICAL</Card.Title>
-                <Button
-                  href="#historical"
-                  className="btn btn-warning btn-sm"
-                  onClick={() => {
-                    setCurrentCategory("historical");
-                  }}
-                >
-                  Give me inspo
-                </Button>
-              </div>
-            </Card.ImgOverlay>
-          </Card>
-
-          <Card key="2" className="categoryCard text-white mx-1">
-            <Card.Img src={familyfun} alt="historical image" />
-            <div className="gradientDiv"></div>
-
-            <Card.ImgOverlay className="d-flex flex-column justify-content-end">
-              <div className="d-inline-flex justify-content-between">
-                <Card.Title>FAMILY FUN</Card.Title>
-                <Button
-                  href="#family"
-                  className="btn btn-warning btn-sm"
-                  onClick={() => {
-                    setCurrentCategory("family");
-                  }}
-                >
-                  Give me inspo
-                </Button>
-              </div>
-            </Card.ImgOverlay>
-          </Card>
-
-          <Card key="3" className="categoryCard text-white mx-1">
-            <Card.Img src={outdoors} alt="historical image" />
-            <div className="gradientDiv"></div>
-
-            <Card.ImgOverlay className="d-flex flex-column justify-content-end">
-              <div className="d-inline-flex justify-content-between">
-                <Card.Title>OUTDOORS</Card.Title>
-                <Button
-                  href="#outdoors"
-                  className="btn btn-warning btn-sm"
-                  onClick={() => {
-                    setCurrentCategory("outdoor");
-                  }}
-                >
-                  Give me inspo
-                </Button>
-              </div>
-            </Card.ImgOverlay>
-          </Card>
-
-          <Card key="4" className="categoryCard text-white mx-1">
-            <Card.Img src={random} alt="historical image" />
-            <div className="gradientDiv"></div>
-
-            <Card.ImgOverlay className="d-flex flex-column justify-content-end">
-              <div className="d-inline-flex justify-content-between">
-                <Card.Title>RANDOM</Card.Title>
-                <Button
-                  href="#random"
-                  className="btn btn-warning btn-sm"
-                  onClick={() => {
-                    setCurrentCategory("random");
-                  }}
-                >
-                  Give me inspo
-                </Button>
-              </div>
-            </Card.ImgOverlay>
-          </Card>
-        </CardGroup>
-        <div className="row my-5">
-          {currentCategory === undefined ? null : (
-            <SwipeCard category={currentCategory} />
-          )}
+      </header>
+      <div className="card-group">
+        <div className="card">
+          <div className="gradientDiv"></div>
+          <img
+            src={historical}
+            className="card-img"
+            id="inspo-image"
+            alt="..."
+          ></img>
+          <div className="card-img-overlay text-white d-flex flex-column justify-content-end">
+            <div className="d-inline-flex justify-content-between">
+              <h5 className="card-title">HISTORICAL</h5>
+              <a
+                href="#historical"
+                className="btn btn-custom btn-sm"
+                onClick={() => {
+                  setCurrentCategory("historical");
+                }}
+              >
+                Give me inspo
+              </a>
+            </div>
+          </div>
         </div>
+        <div className="card">
+          <div className="gradientDiv"></div>
+          <img
+            src={familyfun}
+            className="card-img"
+            id="inspo-image"
+            alt="..."
+          ></img>
+          <div className="card-img-overlay text-white d-flex flex-column justify-content-end">
+            <div className="d-inline-flex justify-content-between">
+              <h5 className="card-title">FAMILY FUN</h5>
+              <a
+                href="#family"
+                className="btn btn-custom btn-sm"
+                onClick={() => {
+                  setCurrentCategory("family");
+                }}
+              >
+                Give me inspo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="gradientDiv"></div>
+          <img
+            src={outdoors}
+            className="card-img"
+            id="inspo-image"
+            alt="..."
+          ></img>
+          <div className="card-img-overlay text-white d-flex flex-column justify-content-end">
+            <div className="d-inline-flex justify-content-between">
+              <h5 className="card-title">OUTDOORS</h5>
+              <a
+                href="#outdoors"
+                className="btn btn-custom btn-sm"
+                onClick={() => {
+                  setCurrentCategory("outdoor");
+                }}
+              >
+                Give me inspo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="gradientDiv"></div>
+          <img
+            src={random}
+            className="card-img"
+            id="inspo-image"
+            alt="..."
+          ></img>
+          <div className="card-img-overlay text-white d-flex flex-column justify-content-end">
+            <div className="d-inline-flex justify-content-between">
+              <h5 className="card-title">RANDOM</h5>
+              <a
+                href="#random"
+                className="btn btn-custom btn-sm"
+                onClick={() => {
+                  setCurrentCategory("random");
+                }}
+              >
+                Give me inspo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="row" style={{ paddingTop: 40 }}>
+        {currentCategory === undefined ? null : (
+          <SwipeCard category={currentCategory} />
+        )}
       </div>
     </div>
   );

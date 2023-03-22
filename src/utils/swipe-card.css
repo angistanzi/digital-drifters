@@ -76,10 +76,18 @@ h2 {
 }
 
 .buttons {
+
   margin: 20px;
   display: flex;
   flex-wrap: wrap;
   padding-top: 30px;
+}
+
+.btn-custom{
+  background-color: #F4E04D !important;
+  border: none;
+  color: black !important;
+  border-radius: 10px;
 }
 
 @media (max-width: 625px) {
