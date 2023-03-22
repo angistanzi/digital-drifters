@@ -33,15 +33,16 @@ function FlightFilter() {
   };
 
   return (
-    <div>
+<div>
        <div className="card mx-auto" style={{ width: "90%" }}>
-  <img src={flighthero} className="card-img-top" alt="..." />
-  <div className="card-body">
-    <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of the card's content.
-    </p>
-  </div>
-</div>
+          <img src={flighthero} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <p className="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+          </div>
+        </div>
+    <Row>
       <Form onSubmit={handleSubmit}>
         <Row>
           {/* Departure location input */}
@@ -85,11 +86,6 @@ function FlightFilter() {
               }}
             />
           </Form.Group>
-          {/* <Form.Group className="col-md-2" controlId="formReturnDate">
-          <Form.Label>Return date</Form.Label>
-          <Form.Control type="date" />
-        </Form.Group> */}
-          {/* Number of passengers input */}
           <Form.Group className="col-md-1, flight-form-group" controlId="formPassengers">
             <Form.Label>Passengers</Form.Label>
             <Form.Control
@@ -103,7 +99,6 @@ function FlightFilter() {
               <option>2</option>
               <option>3</option>
               <option>4</option>
-              <option>5+</option>
             </Form.Control>
           </Form.Group>
         </Row>
@@ -114,7 +109,8 @@ function FlightFilter() {
         </Button>
       </Form>
       <FlightResults flightResults={flightResults}></FlightResults>
-    </div>
+    </Row>
+</div>
   );
 }
 
