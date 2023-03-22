@@ -31,11 +31,7 @@ function HomePage() {
                     <Card.Title>Book flights today</Card.Title>
                     <Button variant="custom" size="sm">
                       <NavLink
-                        to="/flight-filter"
-                        // When the NavLink is active, the "active" class is added.
-                        className={({ isActive }) =>
-                          isActive ? "nav-link active" : "nav-link"
-                        }
+                        onClick={() => window.location.href='/flight-filter'}
                       >
                         Book flights
                       </NavLink>
@@ -56,11 +52,7 @@ function HomePage() {
                     <Card.Title>Need some inspiration?</Card.Title>
                     <Button variant="custom" size="sm">
                       <NavLink
-                        to="/flight-inspo"
-                        // When the NavLink is active, the "active" class is added.
-                        className={({ isActive }) =>
-                          isActive ? "nav-link active" : "nav-link"
-                        }
+                        onClick={() => window.location.href='/travel-inspo'}
                       >
                         Take me there
                       </NavLink>
@@ -81,11 +73,7 @@ function HomePage() {
                     <Card.Title>Your favorites</Card.Title>
                     <Button variant="custom" size="sm">
                       <NavLink
-                        to="/favorite-list"
-                        // When the NavLink is active, the "active" class is added.
-                        className={({ isActive }) =>
-                          isActive ? "nav-link active" : "nav-link"
-                        }
+                        onClick={() => window.location.href='/favorite-list'}
                       >
                         Let's go
                       </NavLink>

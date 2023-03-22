@@ -90,6 +90,11 @@ h2 {
   border-radius: 10px;
 }
 
+.btn-custom:hover{
+  background-color: #587792 !important;
+  color:#fff !important;
+}
+
 @media (max-width: 625px) {
   .buttons {
     flex-direction: column;

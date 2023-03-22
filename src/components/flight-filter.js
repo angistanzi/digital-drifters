@@ -35,8 +35,11 @@ function FlightFilter() {
   return (
     <div>
           
-        
-          <Form className="row" onSubmit={handleSubmit}>
+        <div className="text-center mb-5">
+         <h1 style={{paddingTop:50}} className="display-4 fw-bold mb-5">WHERE TO?</h1>
+        </div>
+          <div className="form-custom">
+          <Form className="row justify-content-around" style={{paddingBottom:50}} onSubmit={handleSubmit}>
               {/* Departure location input */}
               <Form.Group className="col-md-3" controlId="formDeparture">
                 <Form.Label>Departure</Form.Label>
@@ -78,7 +81,7 @@ function FlightFilter() {
                   }}
                 />
               </Form.Group>
-              <Form.Group className="col-md-1" controlId="formPassengers">
+              <Form.Group className="col-md-2" controlId="formPassengers">
                 <Form.Label>Passengers</Form.Label>
                 <Form.Control
                   as="select"
@@ -96,12 +99,14 @@ function FlightFilter() {
             
             
             {/* Submit button */}
-            <Button className="col-1" variant="custom" type="submit">
+            <Button style={{width:200}} variant="custom" type="submit">
               Search
             </Button>
+            
           </Form>
-         
-          <div className="col-4" style={{ width: "90%" }}>
+          
+          </div>
+          <div className="col-4" style={{ width: "100%" }}>
               <img src={flighthero} className="card-img-top" alt="..." />
           </div>
           

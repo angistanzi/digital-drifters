@@ -32,10 +32,16 @@ code {
   max-height: 180px;
 }
 
-/*lily css*/
+/*main css*/
 body {
   background-color: #CEE397 !important;
 }
+
+.btn-custom{
+  background-color: #F2ED6F;
+}
+
+/* navbar css */
 
 .navbar-brand {
   padding: 0 15px;
@@ -73,6 +79,9 @@ body {
   background-image: url(./assets/navbaricon.png) !important;
 }
 
+
+/* footer css */
+
 .content-container{
     min-height: calc(100vh - 30px) !important;
 }
@@ -88,6 +97,3 @@ body {
 }
 
 
-.btn-custom{
-  background-color: #F2ED6F;
-}
