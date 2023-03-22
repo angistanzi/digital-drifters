@@ -44,23 +44,6 @@ MIT License
 
 
 
-##Project Name
-Short description of the project.
-
-Installation
-Provide a step-by-step guide on how to install and set up the project. If there are any prerequisites or dependencies that need to be installed, mention them here.
-
-Usage
-Explain how to use the project. Provide examples or screenshots if necessary. If the project has any special commands or features, list them here.
-
-Development
-If the project is open-source and accepts contributions, include a section on how to contribute to the project. This could include instructions on how to set up a development environment, how to submit bug reports or feature requests, and any other relevant information.
-
-Credits
-List any contributors, libraries, or resources used in the project. If there are any licenses or attributions that need to be included, mention them here.
-
-License
-Include the project's license information. If you're unsure what license to use, consult with a legal professional.
 
 
 
@@ -71,25 +54,3 @@ Include the project's license information. If you're unsure what license to use,
 
 
 
-Table of Contents
-Features
-Technologies Used
-Installation
-Usage
-Contributing
-License
-Features
-Digital Drifters comes with the following features:
-
-Search for flights by city, date, and number of passengers.
-Get random travel inspiration from the website.
-Save favorite destinations to a favorites page for later use.
-Fully mobile responsive.
-Technologies Used
-The following technologies were used to develop Digital Drifters:
-
-React
-Bootstrap
-API #1 (name)
-API #2 (name)
-Installation

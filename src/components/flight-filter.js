@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Form, Row, Dropdown } from "react-bootstrap";
+import { Form, Row } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import FlightResults from "./flight-results.js";
 import airports from "../data/airport-data.json";
 import { getFlightsData } from "./API.js";
+
 
 function FlightFilter() {
   const [departure, setDeparture] = useState("");
@@ -32,7 +33,7 @@ function FlightFilter() {
       <Form onSubmit={handleSubmit}>
         <Row>
           {/* Departure location input */}
-          <Form.Group className="col-md-3" controlId="formDeparture">
+          <Form.Group className="col-md-3, flight-form-group" controlId="formDeparture">
             <Form.Label>Departure</Form.Label>
             <Form.Control
               type="text"
@@ -43,7 +44,7 @@ function FlightFilter() {
             />
           </Form.Group>
           {/* Arrival location input */}
-          <Form.Group className="col-md-3" controlId="formDestination">
+          <Form.Group className="col-md-3, flight-form-group" controlId="formDestination">
             <Form.Label>Destination</Form.Label>
             <Form.Control
               type="text"
@@ -54,7 +55,7 @@ function FlightFilter() {
             />
           </Form.Group>
           {/* Flight dates input */}
-          <Form.Group className="col-md-2" controlId="formDepartureDate">
+          <Form.Group className="col-md-2, flight-form-group" controlId="formDepartureDate">
             <Form.Label>Departure date</Form.Label>
             <Form.Control
               type="date"
@@ -68,7 +69,7 @@ function FlightFilter() {
           <Form.Control type="date" />
         </Form.Group> */}
           {/* Number of passengers input */}
-          <Form.Group className="col-md-1" controlId="formPassengers">
+          <Form.Group className="col-md-1, flight-form-group" controlId="formPassengers">
             <Form.Label>Passengers</Form.Label>
             <Form.Control
               as="select"
@@ -85,80 +86,7 @@ function FlightFilter() {
             </Form.Control>
           </Form.Group>
         </Row>
-        {/* <Dropdown>
-        <Dropdown.Toggle
-          className="col-md-4"
-          variant="secondary"
-          id="filter-dropdown"
-        >
-          Additional Filters
-        </Dropdown.Toggle>
-        <Dropdown.Menu show={isOpen}>
-          <Dropdown.Header>Filter by</Dropdown.Header>
-          <Dropdown.Divider />
-          <Dropdown.Item>
-            <Form.Group className="col-md-12" controlId="formCabinClass">
-              <Form.Label>Cabin Class</Form.Label>
-              <Form.Control as="select" onChange={(e) => e.stopPropagation()}>
-                <option>Economy</option>
-                <option>Premium Economy</option>
-                <option>Business</option>
-                <option>First Class</option>
-              </Form.Control>
-            </Form.Group>
-          </Dropdown.Item>
-          <Dropdown.Item>
-            <Form.Group className="col-md-2" controlId="formDirectFlightsOnly">
-              <Form.Label>Direct Flights Only</Form.Label>
-              <Form.Check
-                type="checkbox"
-                label=""
-                onChange={(e) => e.stopPropagation()}
-              />
-            </Form.Group>
-          </Dropdown.Item>
-          <Dropdown.Item>
-            <Form.Group className="col-md-2" controlId="formFlexibleDates">
-              <Form.Label>Flexible Dates</Form.Label>
-              <Form.Check
-                type="checkbox"
-                label=""
-                onChange={(e) => e.stopPropagation()}
-              />
-            </Form.Group>
-          </Dropdown.Item>
-          <Dropdown.Item>
-            <Form.Group className="col-md-12" controlId="formDepartureTime">
-              <Form.Label>Departure Time</Form.Label>
-              <Form.Control
-                as="select"
-                defaultValue="Any"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <option>Any</option>
-                <option>Morning</option>
-                <option>Afternoon</option>
-                <option>Evening</option>
-              </Form.Control>
-            </Form.Group>
-          </Dropdown.Item>
-          <Dropdown.Item>
-            <Form.Group className="col-md-12" controlId="formPriceRange">
-              <Form.Label>Price Range</Form.Label>
-              <Form.Control
-                type="number"
-                placeholder="Min"
-                onClick={(e) => e.stopPropagation()}
-              />
-              <Form.Control
-                type="number"
-                placeholder="Max"
-                onClick={(e) => e.stopPropagation()}
-              />
-            </Form.Group>
-          </Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown> */}
+        
         {/* Submit button */}
         <Button variant="primary" type="submit">
           Flight Search

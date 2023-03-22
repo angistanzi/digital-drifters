@@ -9,7 +9,7 @@ function Navbar() {
       className="navbar navbar-expand-lg navbar-light bg-secondary"
       style={{ height: "80px" }}
     >
-      <a className="navbar-brand" href="home-page.jsx">
+      <a className="navbar-brand" href="/">
         <img src={logoImg} alt="logo" height="50" />
       </a>
       <button
