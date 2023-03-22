@@ -4,6 +4,8 @@ import { Button } from "react-bootstrap";
 import FlightResults from "./flight-results.js";
 import airports from "../data/airport-data.json";
 import { getFlightsData } from "./API.js";
+import "./flight.css"; 
+import flighthero from '../assets/flighthero.png';
 
 
 function FlightFilter() {
@@ -30,6 +32,14 @@ function FlightFilter() {
 
   return (
     <div>
+       <div className="card mx-auto" style={{ width: "90%" }}>
+  <img src={flighthero} className="card-img-top" alt="..." />
+  <div className="card-body">
+    <p className="card-text">
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+  </div>
+</div>
       <Form onSubmit={handleSubmit}>
         <Row>
           {/* Departure location input */}
@@ -88,7 +98,7 @@ function FlightFilter() {
         </Row>
         
         {/* Submit button */}
-        <Button variant="primary" type="submit">
+        <Button className="flight-form-group" variant="primary" type="submit">
           Flight Search
         </Button>
       </Form>

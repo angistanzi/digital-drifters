@@ -33,13 +33,6 @@ body {
   height: 50px;
   margin-right: 10px;
 }
-/*flight search css*/
-.flight-form-group {
-  margin-bottom: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem; /* Add left padding */
-  padding-right: 1rem; /* Add right padding */
-}
+
 
 
