@@ -62,10 +62,11 @@ body {
 
 .navbar-nav a{
   color: white;
+  text-align: center;
 }
 
 .navbar-nav a:hover{
-  color: #9AC9E1;
+  color: #587792;
 }
 
 .navbar-toggler-icon{
