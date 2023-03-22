@@ -9,9 +9,9 @@ import '../index.css';
 function HomePage() {
 
   return (
-    <div>
+    <body>
       <Container className="mt-5">
-        <h1 style={{backgroundColor: '#BDEFFB', borderRadius: '10px', padding: '10px', boxShadow: '0 0.5rem 1rem rgba(0, 0, 0, 0.4)'}}>Want to book flights or not sure where to go? Explore some options below!</h1>
+        <h1>Want to book flights or not sure where to go? Explore some options below!</h1>
 
         <div className="row mt-5">
           <div className="col-md-6 mb-4">
@@ -55,7 +55,7 @@ function HomePage() {
       <footer className="mt-5 py-3 bg-light text-center">
         Digital Drifters &copy; 2023
       </footer>
-    </div>
+    </body>
   );
 }
 
