@@ -1,21 +1,20 @@
 #root {
-
   overflow: hidden;
-} 
+}
 
 .app {
   overflow: hidden;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   color: #000000;
-  text-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+  text-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
@@ -26,22 +25,20 @@ h2 {
   position: absolute;
 }
 
-#inspo-image{
-    max-height: 180px;
+#inspo-image {
+  max-height: 180px;
 }
 
-#attractions{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+#attractions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cardContainer {
   width: 90vw;
   max-width: 260px;
   height: 300px;
-  
 }
 
 .card-swipe {
@@ -50,8 +47,8 @@ h2 {
   width: 80vw;
   max-width: 260px;
   height: 300px;
-  box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
-  border-radius: 20px;
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
   background-size: cover;
   background-position: center;
 }
@@ -61,11 +58,11 @@ h2 {
   height: 100%;
 }
 
-
-.card-swipe h3 {
+.card-swipe h5 {
   position: absolute;
   bottom: 0;
-  margin: 10px;
+  margin-bottom: 20px;
+  margin-left: 15px;
   color: #fff;
 }
 
@@ -94,16 +91,16 @@ h2 {
 .buttons button {
   flex-shrink: 0;
   padding: 10px;
-  border-radius: 5px;
+  /* border-radius: 5px;
   border: none;
   color: #000000;
   font-size: 18px;
-  background-color: #ffc107;
+  background-color: #ffc107; */
   transition: 200ms;
   margin: 10px;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   width: 160px;
-  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.10);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .buttons button:hover {
@@ -111,11 +108,37 @@ h2 {
 }
 
 @keyframes popup {
-  0%   { transform: scale(1,1) }
-  10%  { transform: scale(1.1,1.1) }
-  30%  { transform: scale(.9,.9) }
-  50%  { transform: scale(1,1) }
-  57%  { transform: scale(1,1) }
-  64%  { transform: scale(1,1) }
-  100% { transform: scale(1,1) }
+  0% {
+    transform: scale(1, 1);
+  }
+  10% {
+    transform: scale(1.1, 1.1);
+  }
+  30% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  57% {
+    transform: scale(1, 1);
+  }
+  64% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.gradientDiv {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    80%,
+    rgb(0, 0, 0, 1)
+  );
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
