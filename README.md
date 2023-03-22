@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Digital Drifters - Holiday Booking Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Digital Drifters is a holiday booking website that allows users to research their flights directly from the website. It allows users to refine their search by city, date, and number of passengers. In addition, users can click on a page where they can get random travel inspiration and save the destinations they like to a favorites page for later use. The website is fully mobile responsive and uses React, Bootstrap, and two APIs.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+- Install Node.js: React is built on Node.js, so you need to install it first. You can download and install Node.js from the official website https://nodejs.org/en/.
+- Clone the project: Clone the project repository using a Git client like Git Bash or GitHub Desktop. You can also download the project as a zip file and extract it.
+- Install dependencies: Open a command prompt or terminal and navigate to the project directory. Run the following command to install the project dependencies:
+Copy code
+npm install
+This will install all the dependencies listed in the package.json file.
+- Start the app: Run the following command to start the app:
+sql
+Copy code
+npm start
+This will start the app and open it in your default web browser. If the app does not open automatically, navigate to http://localhost:3000 in your web browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Please navigate through the website to view potential flights or to get travel inspiration, when you see a destination you like, favourite it to add it to the favourites page, and come back later to review them. If you want to immediately view flights from destinations in your favourites bar, there is a button to do so. 
 
-### `npm test`
+## Credits
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Angelina Stanzione 
+Connie Hinojosa 
+Tamara Joniec 
+Lily Halladay
 
-### `npm run build`
+## License
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+MIT License
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+##Project Name
+Short description of the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Installation
+Provide a step-by-step guide on how to install and set up the project. If there are any prerequisites or dependencies that need to be installed, mention them here.
 
-### Analyzing the Bundle Size
+Usage
+Explain how to use the project. Provide examples or screenshots if necessary. If the project has any special commands or features, list them here.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Development
+If the project is open-source and accepts contributions, include a section on how to contribute to the project. This could include instructions on how to set up a development environment, how to submit bug reports or feature requests, and any other relevant information.
 
-### Making a Progressive Web App
+Credits
+List any contributors, libraries, or resources used in the project. If there are any licenses or attributions that need to be included, mention them here.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+License
+Include the project's license information. If you're unsure what license to use, consult with a legal professional.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+Table of Contents
+Features
+Technologies Used
+Installation
+Usage
+Contributing
+License
+Features
+Digital Drifters comes with the following features:
+
+Search for flights by city, date, and number of passengers.
+Get random travel inspiration from the website.
+Save favorite destinations to a favorites page for later use.
+Fully mobile responsive.
+Technologies Used
+The following technologies were used to develop Digital Drifters:
+
+React
+Bootstrap
+API #1 (name)
+API #2 (name)
+Installation
