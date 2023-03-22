@@ -23,7 +23,7 @@ function FlightResults(props) {
                 </Card.Text>
                 <Card.Text>
                   Price: ${flight.price}{" "}
-                  <Button variant="primary" size="sm">
+                  <Button variant="primary" size="sm" href={flight.link} target="blank">
                     Book Now
                   </Button>
                 </Card.Text>

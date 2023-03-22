@@ -10,6 +10,7 @@ function FlightFilter() {
   const [passengers, setPassengers] = useState(1);
   const [destination, setDestination] = useState("");
   const [departureDate, setDepartureDate] = useState();
+  const [returnDate, setReturnDate] = useState();
   const [flightResults, setFlightResults] = useState([]);
 
   const handleSubmit = async (event) => {
@@ -21,7 +22,8 @@ function FlightFilter() {
       passengers,
       departureCode,
       destinationCode,
-      departureDate
+      departureDate,
+      returnDate
     ).then((flights) => {
       setFlightResults(flights);
     });
@@ -60,6 +62,15 @@ function FlightFilter() {
               type="date"
               onChange={(event) => {
                 setDepartureDate(event.target.value);
+              }}
+            />
+          </Form.Group>
+          <Form.Group className="col-md-2" controlId="formReturnDate">
+            <Form.Label>Return date</Form.Label>
+            <Form.Control
+              type="date"
+              onChange={(event) => {
+                setReturnDate(event.target.value);
               }}
             />
           </Form.Group>
