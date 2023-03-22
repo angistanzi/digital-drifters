@@ -19,8 +19,14 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  border-radius: 5px;
 }
 
 .card-title {
   margin-bottom: 0px !important;
+}
+
+.card {
+  border: 0px !important;
+  border-radius: 5px !important;
 }

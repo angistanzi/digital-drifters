@@ -16,8 +16,8 @@ function TravelInspo() {
         <h1 id="travelHeader" className="text-center display-4 fw-bold mb-5">
           ✨DESTINATION INSPIRATION✨
         </h1>
-        <CardGroup>
-          <Card key="1" className="cityCard text-white">
+        <CardGroup className="mb-5">
+          <Card key="1" className="categoryCard text-white mx-1">
             <Card.Img src={historical} alt="historical image" />
             <div className="gradientDiv"></div>
 
@@ -37,7 +37,7 @@ function TravelInspo() {
             </Card.ImgOverlay>
           </Card>
 
-          <Card key="2" className="cityCard text-white">
+          <Card key="2" className="categoryCard text-white mx-1">
             <Card.Img src={familyfun} alt="historical image" />
             <div className="gradientDiv"></div>
 
@@ -57,7 +57,7 @@ function TravelInspo() {
             </Card.ImgOverlay>
           </Card>
 
-          <Card key="3" className="cityCard text-white">
+          <Card key="3" className="categoryCard text-white mx-1">
             <Card.Img src={outdoors} alt="historical image" />
             <div className="gradientDiv"></div>
 
@@ -77,7 +77,7 @@ function TravelInspo() {
             </Card.ImgOverlay>
           </Card>
 
-          <Card key="4" className="cityCard text-white">
+          <Card key="4" className="categoryCard text-white mx-1">
             <Card.Img src={random} alt="historical image" />
             <div className="gradientDiv"></div>
 
