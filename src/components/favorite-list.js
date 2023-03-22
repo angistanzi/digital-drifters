@@ -50,7 +50,7 @@ function Favorites() {
   return (
     <Container className="py-5 my-5">
       <div className="text-center mb-5">
-        <h1 className="display-4 fw-bold mb-5">FAVORITES</h1>
+        <h1 className="display-4 fw-bold mb-5">FAVORITES❤️</h1>
         <Row className="justify-content-center">
           <Col lg="5">
             <Form onSubmit={handleSubmit}>
