@@ -1,28 +1,26 @@
-body {
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Set font family and color variables */
+:root {
+  --primary-color: #18A0FB;
+  --secondary-color: #BDEFFB;
+  --text-color: #333333;
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* Reset default margin and padding */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-#inspo-image{
-  max-height: 180px;
-}
-
-/*lily css*/
 body {
-  background-image: url(./assets/clouds.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  font-family: var(--font-family);
 }
 
+/* Navbar css */
 .navbar-brand {
   padding: 0 15px;
   margin-right: 15px;
@@ -34,3 +32,9 @@ body {
   margin-right: 10px;
 }
 
+/*lily css*/
+/* body {
+  background-image: url(./assets/clouds.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */

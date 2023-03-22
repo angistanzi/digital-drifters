@@ -4,7 +4,7 @@ import { Container, Card, Button } from 'react-bootstrap';
 import planeImg from '../assets/plane.png';
 import boatImg from '../assets/boat.jpg';
 import favesImg from '../assets/faves.png';
-
+import '../index.css';
 
 function HomePage() {
 
@@ -22,7 +22,7 @@ function HomePage() {
                 <Card.Text>
                   Book your flight today - refine by dates and price to fit your needs.
                 </Card.Text>
-                <Button variant="primary" onClick={() => window.location.href='/flight-results'}>Take me there</Button>
+                <Button variant="primary" onClick={() => window.location.href='/flight-filter'}>Take me there</Button>
               </Card.Body>
             </Card>
           </div>
