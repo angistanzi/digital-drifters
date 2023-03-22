@@ -1,7 +1,8 @@
 import React, { useState, useRef, useMemo } from "react";
 import TinderCard from "react-tinder-card";
+import swipecards from "../data/swipe-cards.json";
 import "./swipe-card.css";
-import swipecards from "../assets/swipe-cards.json";
+import Card from "react-bootstrap/Card";
 
 function SwipeCard(props) {
   const [currentIndex, setCurrentIndex] = useState(
@@ -128,7 +129,7 @@ function SwipeCard(props) {
           You swiped {lastDirection}
         </h2>
       ) : (
-        <h2 className="infoText">
+        <h2 className="infoText text-center">
           Swipe right to add to favorites, and swipe left to see more!
         </h2>
       )}
