@@ -1,8 +1,12 @@
+
+
 .cityCard {
   margin-bottom: 10px;
   border: 0px;
 }
-
+.btn-custom{
+  background-color: #9AC9E1;
+}
 .card-img {
   height: 200px;
   object-fit: cover;
