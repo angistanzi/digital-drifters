@@ -99,9 +99,11 @@ function FlightFilter() {
             
             
             {/* Submit button */}
+            <div id="submit-btn">
             <Button style={{width:200}} variant="custom" type="submit">
               Search
             </Button>
+            </div>
             
           </Form>
           

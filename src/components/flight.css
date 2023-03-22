@@ -19,6 +19,7 @@
     border: none;
     border-radius: .25rem;
     font-size: 16px;
+    padding: 5px;
   }
   
   button[type="submit"]:hover {
@@ -45,4 +46,10 @@
 .custom-card{
   background-color: #587792;
   color: white;
+}
+
+#submit-btn{
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
 }
