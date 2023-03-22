@@ -62,4 +62,3 @@ export const getFlightsData = (
     })
     .catch((err) => console.error(err));
 };
-

@@ -10,10 +10,12 @@ import '../index.css'
 function HomePage() {
 
   return (
+
     
       <Container className="py-5 my-5">
         <div className="text-center mb-5">
          <h1 className="display-4 fw-bold mb-5">DISCOVER THE WORLD</h1>
+
         </div>
         <Row className="justify-content-evenly">
           <Col lg="8">

@@ -9,6 +9,7 @@ function Navbar() {
       className="navbar navbar-expand-lg"
       style={{ height: "80px" }}
     >
+
       <a className="navbar-brand display-5 fw-bold" href="/"> 
         <img src={logoImg} alt="logo" height="100" />
         DIGITAL DRIFTERS
