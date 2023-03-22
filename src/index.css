@@ -3,9 +3,9 @@
 
 /* Set font family and color variables */
 :root {
-  --primary-color: #18A0FB;
-  --secondary-color: #BDEFFB;
-  --text-color: #333333;
+  --primary-color: #1A1F33;
+  --secondary-color: #9AC9E1;
+  --text-color: #FFFFFF;
   --font-family: 'Roboto', sans-serif;
 }
 
@@ -17,16 +17,50 @@
 }
 /* Home page */
 body {
-  font-family: var(--font-family);
+  background-color: #1A1F33 !important;
+  color: #FFFFFF;
+  font-family: ‘Open Sans’, sans-serif;
 }
 /* Apply styles to the header */
 h1 {
-  background-color: var(--secondary-color);
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px #ccc;
 }
+h1, h2, h3, h4, h5, h6 {
+  color: #9AC9E1 !important;
+  font-family: ‘Roboto’, sans-serif !important;
+}
+.card {
+  border: none !important;
+  transition: box-shadow 0.3s ease-in-out !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.card-img {
+  height: 12rem;
+  object-fit: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  margin-bottom: 1.5rem;
+}
+
 footer {
   font-size: 0.9rem;
   background-color: #f8f9fa;
