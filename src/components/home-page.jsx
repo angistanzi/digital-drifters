@@ -17,8 +17,8 @@ function HomePage() {
 
   if (!loggedIn) {
     return <AuthenticationPage handleLogin={handleLogin} />;
-  }
-
+  } else {
+   
   return (
 
     
@@ -99,7 +99,7 @@ function HomePage() {
       </Row>
     </Container>
  
-);
+)};
 }
 
 export default HomePage;
