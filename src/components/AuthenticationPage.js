@@ -15,7 +15,7 @@ function AuthenticationPage({ handleLogin }) {
   return (
     <Container className="py-5 my-5">
       <div className="text-center mb-5">
-        <h1 className="display-4 fw-bold mb-5">Welcome! Please Login</h1>
+        <h1 className="display-4 fw-bold mb-5">WELCOME! PLEASE LOGIN</h1>
       </div>
       <Row className="justify-content-center">
         <Col lg="6">
