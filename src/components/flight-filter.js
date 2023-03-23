@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import FlightResults from "./flight-results.js";
 import airports from "../data/airport-data.json";
 import { getFlightsData } from "./API.js";
-import "./flight.css";
+import "./flight-filter.css";
 import flighthero from "../assets/flighthero.png";
 
 function FlightFilter() {
@@ -113,10 +113,16 @@ function FlightFilter() {
           </div>
         </Form>
       </div>
-      <div className="col-4" style={{ width: "100%" }}>
-        <img src={flighthero} className="card-img-top" alt="..." />
+      <div
+        className={`col-4 ${flightResults.length ? "d-none" : ""}`}
+        style={{ width: "100%" }}
+      >
+        <img
+          src={flighthero}
+          className="card-img-top"
+          alt="cute travel-themed illustration"
+        />
       </div>
-
       <FlightResults flightResults={flightResults}></FlightResults>
     </div>
   );

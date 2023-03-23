@@ -6,7 +6,7 @@ function FlightResults(props) {
   //     return null;
   //   }
   return (
-    <Container className="my-4">
+    <Container className="my-4 flightCards">
       <Row xs={1} sm={2} lg={3} className="g-4">
         {props.flightResults.map((flight, index) => (
           <Col key={index}>
@@ -23,7 +23,12 @@ function FlightResults(props) {
                 </Card.Text>
                 <Card.Text>
                   Price: ${flight.price}{" "}
-                  <Button variant="custom" size="sm" href={flight.link} target="blank">
+                  <Button
+                    variant="custom"
+                    size="sm"
+                    href={flight.link}
+                    target="blank"
+                  >
                     Book Now
                   </Button>
                 </Card.Text>
