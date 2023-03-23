@@ -5,10 +5,13 @@ import HomePage from "./components/home-page.jsx";
 import TravelInspo from "./components/travel-inspo.js";
 import FlightFilter from "./components/flight-filter";
 import Favorites from "./components/favorite-list.js";
+import AuthenticationPage from './components/AuthenticationPage.js'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "typeface-pacifico";
 
 function App() {
+
+  
   return (
     <div>
     <div className="content-container">
@@ -17,7 +20,9 @@ function App() {
         <Navbar />
 
         <Routes basename="/Digital-Drifters/">
-          <Route path="/" element={<HomePage />} />
+          
+          <Route path="/" element={<AuthenticationPage />} />
+          <Route path="/home-page" element={<HomePage />} />
 
           <Route path="/flight-filter" element={<FlightFilter />} />
           <Route path="/travel-inspo" element={<TravelInspo />} />
