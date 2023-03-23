@@ -66,7 +66,7 @@ function Favorites() {
             <Form onSubmit={handleSubmit}>
               <Form.Control
                 type="text"
-                placeholder="Write the cities you have visited"
+                placeholder="Write the name of the cities you have visited, e.g. 'Madrid'"
                 aria-label="Search"
                 onChange={(event) => setCityName(event.target.value)}
                 value={cityName}
@@ -142,13 +142,7 @@ function Favorites() {
             {savedCities.length === 0 ? (
               <h5 >You haven't saved any cities yet. Add favorites from the Travel Inspiration tab to view them here!</h5>
             ) : savedCities.length === 1 ? (
-              <h5 style={{
-                fontFamily: '"Pacifico"',
-                fontSize: '2rem',
-                color: '#587792ff',
-                textAlign: 'center',
-                textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
-              }}>{`So far you want to visit ${savedCities.length} city!`}</h5>
+              <h5>{`So far you want to visit ${savedCities.length} city!`}</h5>
             ) : (
               <h5 style={{
                 fontFamily: '"Pacifico"',

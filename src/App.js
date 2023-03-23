@@ -34,10 +34,10 @@ function App() {
     </div>
     <footer className="footer--pin py-3 text-center "
      style={{
-      backgroundColor: '#f2ed6fff',
+      backgroundColor: '#F2ED6F',
       fontFamily: '"Pacifico", cursive',
       fontSize: '1rem',
-      color: '#587792ff',
+      color: '#587792',
       textAlign: 'center',
       paddingTop:50,
       textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
