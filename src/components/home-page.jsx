@@ -5,8 +5,8 @@ import planeImg from '../assets/plane.png';
 import tropical from '../assets/tropical.jpg';
 import favesImg from '../assets/fave.jpg';
 import '../index.css';
-
 import "typeface-pacifico";
+import AuthenticationPage from './AuthenticationPage.js'
 
 
 function HomePage() {
@@ -108,8 +108,7 @@ function HomePage() {
 
   );
 
- 
-)};
+ };
 
 }
 
