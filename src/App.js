@@ -9,8 +9,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
+    <div>
+    <div className="content-container">
     <Router>
-      <div>
+      
         <Navbar />
 
         <Routes basename="/Digital-Drifters/">
@@ -21,8 +23,13 @@ function App() {
 
           <Route path="/favorite-list" element={<Favorites />} />
         </Routes>
-      </div>
+     
     </Router>
+    </div>
+    <footer className="footer--pin py-3 text-center ">
+        Digital Drifters &copy; 2023
+      </footer>
+    </div>
   );
 }
 

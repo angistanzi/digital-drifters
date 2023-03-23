@@ -12,21 +12,41 @@ code {
     monospace;
 }
 
+.card-image{
+  object-fit: cover;
+}
+
+.gradientDiv {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    80%,
+    rgb(0, 0, 0, 1)
+  );
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 #inspo-image{
   max-height: 180px;
 }
 
-/*lily css*/
+/*main css*/
 body {
-  background-image: url(./assets/clouds.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #CEE397 !important;
 }
+
+.btn-custom{
+  background-color: #F2ED6F;
+}
+
+/* navbar css */
 
 .navbar-brand {
   padding: 0 15px;
   margin-right: 15px;
-  border-right: 1px solid #dee2e6;
+  
 }
 
 .navbar-brand img {
@@ -34,5 +54,46 @@ body {
   margin-right: 10px;
 }
 
+.navbar-collapse{
+  background-color: #8DB1AB;
+}
+.navbar-toggler{
+  color: #9AC9E1;
+}
+
+.navbar{
+  background-color:#8DB1AB;
+
+}
+
+.navbar-nav a{
+  color: white;
+  text-align: center;
+}
+
+.navbar-nav a:hover{
+  color: #587792;
+}
+
+.navbar-toggler-icon{
+  background-image: url(./assets/navbaricon.png) !important;
+}
+
+
+/* footer css */
+
+.content-container{
+    min-height: calc(100vh - 30px) !important;
+}
+
+.footer--pin{
+  position: relative !important;
+  left: 0;
+  bottom: 0;
+}
+
+.footer{
+  background-color: #587792;
+}
 
 

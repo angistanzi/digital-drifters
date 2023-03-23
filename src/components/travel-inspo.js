@@ -23,10 +23,10 @@ function TravelInspo() {
 
             <Card.ImgOverlay className="d-flex flex-column justify-content-end">
               <div className="d-inline-flex justify-content-between">
-                <Card.Title>HISTORICAL</Card.Title>
+                <Card.Title>Historical</Card.Title>
                 <Button
                   href="#historical"
-                  className="btn btn-warning btn-sm"
+                  className="btn btn-custom btn-sm"
                   onClick={() => {
                     setCurrentCategory("historical");
                   }}
@@ -43,10 +43,10 @@ function TravelInspo() {
 
             <Card.ImgOverlay className="d-flex flex-column justify-content-end">
               <div className="d-inline-flex justify-content-between">
-                <Card.Title>FAMILY FUN</Card.Title>
+                <Card.Title>Family fun</Card.Title>
                 <Button
                   href="#family"
-                  className="btn btn-warning btn-sm"
+                  className="btn btn-custom btn-sm"
                   onClick={() => {
                     setCurrentCategory("family");
                   }}
@@ -63,10 +63,10 @@ function TravelInspo() {
 
             <Card.ImgOverlay className="d-flex flex-column justify-content-end">
               <div className="d-inline-flex justify-content-between">
-                <Card.Title>OUTDOORS</Card.Title>
+                <Card.Title>Outdoors</Card.Title>
                 <Button
                   href="#outdoors"
-                  className="btn btn-warning btn-sm"
+                  className="btn btn-custom btn-sm"
                   onClick={() => {
                     setCurrentCategory("outdoor");
                   }}
@@ -83,10 +83,10 @@ function TravelInspo() {
 
             <Card.ImgOverlay className="d-flex flex-column justify-content-end">
               <div className="d-inline-flex justify-content-between">
-                <Card.Title>RANDOM</Card.Title>
+                <Card.Title>Random</Card.Title>
                 <Button
                   href="#random"
-                  className="btn btn-warning btn-sm"
+                  className="btn btn-custom btn-sm"
                   onClick={() => {
                     setCurrentCategory("random");
                   }}
