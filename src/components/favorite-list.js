@@ -60,7 +60,7 @@ function Favorites() {
           textAlign: 'center',
           paddingTop: 50,
           textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
-        }}>Your <span style={{ color: '#66CDAA' }}>favourites❤️</span></h1>
+        }}>Your <span style={{ color: '#66CDAA' }}>Favorites❤️</span></h1>
         <Row className="justify-content-center">
           <Col lg="5">
             <Form onSubmit={handleSubmit}>
@@ -88,13 +88,7 @@ function Favorites() {
               textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
             }}>Places I've been</h1>
             {visitedCities.length === 0 ? (
-              <h5 style={{
-                fontFamily: '"Pacifico"',
-                fontSize: '2rem',
-                color: '#587792ff',
-                textAlign: 'center',
-                textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
-              }}>You haven't visited any cities yet!</h5>
+              <h5>You haven't visited any cities yet! Type the cities you've visited in the form above and they will appear here.</h5>
             ) : visitedCities.length === 1 ? (
               <h5>{`So far you've visited ${visitedCities.length} city!`}</h5>
             ) : (
@@ -146,13 +140,7 @@ function Favorites() {
               textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
             }}>Places I want to go</h1>
             {savedCities.length === 0 ? (
-              <h5 style={{
-                fontFamily: '"Pacifico"',
-                fontSize: '2rem',
-                color: '#587792ff',
-                textAlign: 'center',
-                textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
-              }}>You haven't any saved cities yet.</h5>
+              <h5 >You haven't saved any cities yet. Add favorites from the Travel Inspiration tab to view them here!</h5>
             ) : savedCities.length === 1 ? (
               <h5 style={{
                 fontFamily: '"Pacifico"',

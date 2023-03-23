@@ -22,7 +22,7 @@ function AuthenticationPage({ handleLogin }) {
           color: '#283149',
           textAlign: 'center',
           textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
-        }}className="display-4 fw-bold mb-5">Welcome! <span style={{ color: '#66CDAA' }}>Please login💻</span> </h1>
+        }}className="display-4 fw-bold mb-5">Welcome! <span style={{ color: '#66CDAA' }}>Please login 💻</span> </h1>
       </div>
       <Row className="justify-content-center">
         <Col lg="6">
