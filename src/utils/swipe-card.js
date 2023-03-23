@@ -1,7 +1,8 @@
 import React, { useState, useRef, useMemo } from "react";
 import TinderCard from "react-tinder-card";
+import swipecards from "../data/swipe-cards.json";
 import "./swipe-card.css";
-import swipecards from "../assets/swipe-cards.json";
+import Button from "react-bootstrap/Button";
 
 function SwipeCard(props) {
   const [currentIndex, setCurrentIndex] = useState(
@@ -76,15 +77,7 @@ function SwipeCard(props) {
 
   return (
     <div id="attractions">
-      <link
-        href="https://fonts.googleapis.com/css?family=Damion&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Alatsi&display=swap"
-        rel="stylesheet"
-      />
-      <h1 className="display-4 fw-bold mb-5">CHECK THESE OUT...</h1>
+      <h1 className="display-4 fw-bold my-5">CHECK THESE OUT...</h1>
       <div className="cardContainer" id="attractions">
         {swipecards[props.category].map((suggestion, index) => (
           <TinderCard
@@ -96,40 +89,44 @@ function SwipeCard(props) {
           >
             <div
               style={{ backgroundImage: "url(" + suggestion.url + ")" }}
-              className="card-swipe"
+              className="card-swipe "
             >
-              <h3>{suggestion.location}</h3>
+              <div className="gradientDiv"></div>
+              <h5>{`${suggestion.location}, ${suggestion.country}`}</h5>
             </div>
           </TinderCard>
         ))}
       </div>
       <div className="buttons">
-        <button
-          style={{ backgroundColor: !canSwipe && "#c3c4d3" }}
+        <Button
+          className="btn btn-warning btn-lg"
           onClick={() => swipe("left")}
         >
           Skip
-        </button>
-        <button
-          style={{ backgroundColor: !canGoBack && "#c3c4d3" }}
-          onClick={() => goBack()}
-        >
+        </Button>
+        <Button className="btn btn-warning btn-lg" onClick={() => goBack()}>
           Undo swipe
-        </button>
-        <button
-          style={{ backgroundColor: !canSwipe && "#c3c4d3" }}
+        </Button>
+        <Button
+          className="btn btn-warning btn-lg"
           onClick={() => swipe("right")}
         >
           Add to favorites
-        </button>
+        </Button>
       </div>
-      {lastDirection ? (
+      {lastDirection === "right" && (
         <h2 key={lastDirection} className="infoText">
-          You swiped {lastDirection}
+          Added to favourites
         </h2>
-      ) : (
-        <h2 className="infoText">
-          Swipe right to add to favorites, and swipe left to see more!
+      )}
+      {lastDirection === "left" && (
+        <h2 key={lastDirection} className="infoText">
+          Skipped city
+        </h2>
+      )}
+      {lastDirection === undefined && (
+        <h2 className="infoText text-center">
+          Swipe right to add to favourites, and swipe left to see more!
         </h2>
       )}
     </div>

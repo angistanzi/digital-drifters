@@ -22,7 +22,7 @@ function HomePage() {
                 <Card.Text>
                   Book your flight today - refine by dates and price to fit your needs.
                 </Card.Text>
-                <Button variant="primary" onClick={() => window.location.href='/flight-results'}>Take me there</Button>
+                <Button variant="primary" onClick={() => window.location.href='/flight-filter'}>Take me there</Button>
               </Card.Body>
             </Card>
           </div>

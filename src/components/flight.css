@@ -1,0 +1,42 @@
+/*flight search css*/
+
+
+  .flight-form-group {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"], select {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: .375rem .75rem;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: .25rem;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+    cursor: pointer;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .card {
+    margin-top: 30px;
+    margin-bottom: 30px; 
+  }
+  
