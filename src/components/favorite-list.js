@@ -39,7 +39,9 @@ function Favorites() {
       .then((cityData) => {
         // Adding the city data to the array of
         // visited cities using the spread operator.
-        setVisitedCities([...visitedCities, cityData]);
+        if (!visitedCities.find((city) => city.id === cityData.id)) {
+          setVisitedCities([...visitedCities, cityData]);
+        }
       })
       .catch(() => alert("Please try again"));
     // Clearing the input field after the city has been added.
