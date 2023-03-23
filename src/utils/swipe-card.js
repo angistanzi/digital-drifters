@@ -77,9 +77,9 @@ function SwipeCard(props) {
     <div id="attractions">
       <h1 className="display-4 fw-bold mb-5" style={{
         fontFamily: '"Pacifico", cursive',
-        fontSize: '3rem',
+        fontSize: '4rem',
         fontWeight: 'bold',
-        color: '#f2ed6fff',
+        color: '#F4E04D',
         textAlign: 'center',
         textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
       }}>Check these out...</h1>
@@ -114,27 +114,19 @@ function SwipeCard(props) {
         </Button>
       </div>
       {lastDirection === "right" && (
-        <h2 key={lastDirection} className="infoText">
-          Added to favourites
-        </h2>
+        <h4 key={lastDirection} className="infoText">
+          Added to favorites
+        </h4>
       )}
       {lastDirection === "left" && (
-        <h2 key={lastDirection} className="infoText">
+        <h4 key={lastDirection} className="infoText">
           Skipped city
-        </h2>
+        </h4>
       )}
       {lastDirection === undefined && (
-        <h2 className="infoText text-center"
-          style={{
-            fontFamily: '"Pacifico", cursive',
-            fontSize: '3rem',
-            fontWeight: 'bold',
-            color: '#587792ff',
-            textAlign: 'center',
-            textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
-          }}>
-          Swipe right to add to favourites, and swipe left to see more!
-        </h2>
+        <h4 className="infoText text-center">
+          Swipe right to add to favorites, or swipe left to see more!
+        </h4>
       )}
     </div>
   );
