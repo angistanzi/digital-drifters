@@ -54,3 +54,46 @@ body {
   margin-right: 10px;
 }
 
+.navbar-collapse{
+  background-color: #8DB1AB;
+}
+.navbar-toggler{
+  color: #9AC9E1;
+}
+
+.navbar{
+  background-color:#8DB1AB;
+
+}
+
+.navbar-nav a{
+  color: white;
+  text-align: center;
+}
+
+.navbar-nav a:hover{
+  color: #587792;
+}
+
+.navbar-toggler-icon{
+  background-image: url(./assets/navbaricon.png) !important;
+}
+
+
+/* footer css */
+
+.content-container{
+    min-height: calc(100vh - 30px) !important;
+}
+
+.footer--pin{
+  position: relative !important;
+  left: 0;
+  bottom: 0;
+}
+
+.footer{
+  background-color: #587792;
+}
+
+
