@@ -22,7 +22,7 @@ function SwipeCard(props) {
   );
 
   const updateCurrentIndex = (val) => {
-    console.log(val);
+    // console.log(val);
     setCurrentIndex(val);
     currentIndexRef.current = val;
   };
@@ -37,18 +37,20 @@ function SwipeCard(props) {
     updateCurrentIndex(index - 1);
     if (direction === "right") {
       const savedCities = JSON.parse(localStorage.getItem("savedCities")) || [];
-      localStorage.setItem(
-        "savedCities",
-        JSON.stringify([suggestion, ...savedCities])
-      );
+      if (!savedCities.find((savedCity) => savedCity.id === suggestion.id)) {
+        localStorage.setItem(
+          "savedCities",
+          JSON.stringify([suggestion, ...savedCities])
+        );
+      }
     }
   };
 
   const outOfFrame = (location, idx) => {
-    console.log(
-      `${location} (${idx}) left the screen!`,
-      currentIndexRef.current
-    );
+    // console.log(
+    //   `${location} (${idx}) left the screen!`,
+    //   currentIndexRef.current
+    // );
     // handle the case in which go back is pressed before card goes outOfFrame
     currentIndexRef.current >= idx && childRefs[idx].current.restoreCard();
     // TODO: when quickly swipe and restore multiple times the same card,
@@ -57,11 +59,7 @@ function SwipeCard(props) {
   };
 
   const swipe = async (dir) => {
-    console.log(childRefs);
-    console.log(childRefs[currentIndex]);
-    console.log(currentIndex);
     if (canSwipe && currentIndex < swipecards[props.category].length) {
-      console.log(childRefs[currentIndex].current);
       await childRefs[currentIndex].current.swipe(dir); // Swipe the card!
     }
   };
@@ -70,7 +68,7 @@ function SwipeCard(props) {
   const goBack = async () => {
     if (!canGoBack) return;
     const newIndex = currentIndex + 1;
-    console.log(newIndex);
+    // console.log(newIndex);
     updateCurrentIndex(newIndex);
     await childRefs[newIndex].current.restoreCard();
   };
@@ -105,19 +103,13 @@ function SwipeCard(props) {
         ))}
       </div>
       <div className="buttons">
-        <Button
-          className="btn-custom btn-sm"
-          onClick={() => swipe("left")}
-        >
+        <Button className="btn-custom btn-sm" onClick={() => swipe("left")}>
           Skip
         </Button>
         <Button className="btn-custom btn-sm" onClick={() => goBack()}>
           Undo swipe
         </Button>
-        <Button
-          className="btn-custom btn-sm"
-          onClick={() => swipe("right")}
-        >
+        <Button className="btn-custom btn-sm" onClick={() => swipe("right")}>
           Add to favorites
         </Button>
       </div>

@@ -5,51 +5,9 @@ import planeImg from '../assets/plane.png';
 import tropical from '../assets/tropical.jpg';
 import favesImg from '../assets/fave.jpg';
 import '../index.css';
+
 import "typeface-pacifico";
 
-function AuthenticationPage({ handleLogin }) {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email.trim() !== '') {
-      handleLogin(email);
-    }
-  };
-
-  return (
-    <Container className="py-5 my-5">
-      <div className="text-center mb-5">
-        <h1 className="display-4 fw-bold mb-5" style={{
-          fontFamily: 'Pacifico", cursive',
-          fontSize: '4rem',
-          fontWeight: 'bold',
-          color: '#283149',
-          textAlign: 'center',
-          textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
-        }}>Discover the <span style={{ color: '#66CDAA' }}>World</span> 🌎</h1>
-              </div>
-      <Row className="justify-content-center">
-        <Col lg="6">
-          <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control
-                type="email"
-                placeholder="Enter email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Group>
-
-            <Button variant="custom" size="sm" type="submit" disabled={!email.trim()}>
-              Submit
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
-  );
-}
 
 function HomePage() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -61,8 +19,8 @@ function HomePage() {
 
   if (!loggedIn) {
     return <AuthenticationPage handleLogin={handleLogin} />;
-  }
-
+  } else {
+   
   return (
     <Container className="py-5 my-5">
       <div className="text-center mb-5">
@@ -147,7 +105,12 @@ function HomePage() {
       </Row>
     </Container>
 
+
   );
+
+ 
+)};
+
 }
 
 export default HomePage;

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Form, Row } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import FlightResults from "./flight-results.js";
 import airports from "../data/airport-data.json";
 import { getFlightsData } from "./API.js";
-import "./flight.css"; 
-import flighthero from '../assets/flighthero.png';
-
+import "./flight-filter.css";
+import flighthero from "../assets/flighthero.png";
 
 function FlightFilter() {
   const [departure, setDeparture] = useState("");
@@ -14,7 +13,9 @@ function FlightFilter() {
   const [destination, setDestination] = useState("");
   const [departureDate, setDepartureDate] = useState();
   const [returnDate, setReturnDate] = useState();
-  const [flightResults, setFlightResults] = useState([]);
+  const [flightResults, setFlightResults] = useState(
+    JSON.parse(localStorage.getItem("savedFlights")) || []
+  );
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -29,6 +30,8 @@ function FlightFilter() {
       returnDate
     ).then((flights) => {
       setFlightResults(flights);
+
+      localStorage.setItem("savedFlights", JSON.stringify(flights));
     });
   };
 
@@ -111,20 +114,20 @@ function FlightFilter() {
             <Button style={{width:200}} variant="custom" type="submit">
               Search
             </Button>
-            </div>
-            
-          </Form>
-          
           </div>
-          <div className="col-4" style={{ width: "100%" }}>
-              <img src={flighthero} className="card-img-top" alt="..." />
-          </div>
-          
-
-          <FlightResults flightResults={flightResults}></FlightResults>
-
-
-        
+        </Form>
+      </div>
+      <div
+        className={`col-4 ${flightResults.length ? "d-none" : ""}`}
+        style={{ width: "100%" }}
+      >
+        <img
+          src={flighthero}
+          className="card-img-top"
+          alt="cute travel-themed illustration"
+        />
+      </div>
+      <FlightResults flightResults={flightResults}></FlightResults>
     </div>
   );
 }
