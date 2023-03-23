@@ -12,27 +12,45 @@ code {
     monospace;
 }
 
+.card-image{
+  object-fit: cover;
+}
+
+.gradientDiv {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    80%,
+    rgb(0, 0, 0, 1)
+  );
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 #inspo-image{
   max-height: 180px;
 }
 
-/*lily css*/
+/*main css*/
 body {
-  background-image: url(./assets/clouds.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #CEE397 !important;
 }
+
+.btn-custom{
+  background-color: #F2ED6F;
+}
+
+/* navbar css */
 
 .navbar-brand {
   padding: 0 15px;
   margin-right: 15px;
-  border-right: 1px solid #dee2e6;
+  
 }
 
 .navbar-brand img {
   height: 50px;
   margin-right: 10px;
 }
-
-
 

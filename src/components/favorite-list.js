@@ -50,7 +50,7 @@ function Favorites() {
   return (
     <Container className="py-5 my-5">
       <div className="text-center mb-5">
-        <h1 className="display-4 fw-bold mb-5">FAVOURITES</h1>
+        <h1 className="display-4 fw-bold mb-5">FAVORITES❤️</h1>
         <Row className="justify-content-center">
           <Col lg="5">
             <Form onSubmit={handleSubmit}>
@@ -90,9 +90,6 @@ function Favorites() {
                 <Card.ImgOverlay className="d-flex flex-column justify-content-end">
                   <div className="d-inline-flex justify-content-between">
                     <Card.Title>{`${city.name}, ${city.country}`}</Card.Title>
-                    <Button variant="warning" size="sm">
-                      More cities
-                    </Button>
                   </div>
                 </Card.ImgOverlay>
               </Card>
@@ -137,9 +134,9 @@ function Favorites() {
                 <Card.ImgOverlay className="d-flex flex-column justify-content-end">
                   <div className="d-inline-flex justify-content-between">
                     <Card.Title>{`${city.location}, ${city.country}`}</Card.Title>
-                    <Button variant="warning" size="sm">
+                    <Button variant="custom" size="sm">
                       <NavLink
-                        to="/flight-results"
+                        to="/flight-filter"
                         // When the NavLink is active, the "active" class is added.
                         className={({ isActive }) =>
                           isActive ? "nav-link active" : "nav-link"

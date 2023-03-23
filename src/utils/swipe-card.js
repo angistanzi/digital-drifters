@@ -99,16 +99,16 @@ function SwipeCard(props) {
       </div>
       <div className="buttons">
         <Button
-          className="btn btn-warning btn-lg"
+          className="btn-custom btn-sm"
           onClick={() => swipe("left")}
         >
           Skip
         </Button>
-        <Button className="btn btn-warning btn-lg" onClick={() => goBack()}>
+        <Button className="btn-custom btn-sm" onClick={() => goBack()}>
           Undo swipe
         </Button>
         <Button
-          className="btn btn-warning btn-lg"
+          className="btn-custom btn-sm"
           onClick={() => swipe("right")}
         >
           Add to favorites
