@@ -1,25 +1,14 @@
 
-import React, { useState } from 'react';
-import { Row, Container, Card, Button, NavLink, Col, Form } from 'react-bootstrap';
+import { Row, Container, Card, Button, NavLink, Col } from 'react-bootstrap';
 import planeImg from '../assets/plane.png';
 import tropical from '../assets/tropical.jpg';
 import favesImg from '../assets/fave.jpg';
 import '../index.css';
 import "typeface-pacifico";
-import AuthenticationPage from './AuthenticationPage.js'
 
 
 function HomePage() {
-  const [loggedIn, setLoggedIn] = useState(false);
-
-  const handleLogin = (email) => {
-    // Perform authentication and set loggedIn to true if successful
-    setLoggedIn(true);
-  };
-
-  if (!loggedIn) {
-    return <AuthenticationPage handleLogin={handleLogin} />;
-  } else {
+  
    
   return (
     <Container className="py-5 my-5">
@@ -110,6 +99,6 @@ function HomePage() {
 
  };
 
-}
+
 
 export default HomePage;

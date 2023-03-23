@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { Row, Container, Col, Form, Button } from 'react-bootstrap';
 import '../index.css';
+import { useNavigate } from 'react-router-dom';
 
-function AuthenticationPage({ handleLogin }) {
+function AuthenticationPage() {
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email.trim() !== '') {
-      handleLogin(email);
+      navigate('/home-page')
     }
   };
+
+
 
   return (
     <Container className="py-5 my-5">
@@ -43,7 +49,7 @@ function AuthenticationPage({ handleLogin }) {
         </Col>
       </Row>
     </Container>
-  );
-}
+  )};
+
 
 export default AuthenticationPage;
