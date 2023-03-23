@@ -36,7 +36,15 @@ function FlightFilter() {
     <div>
           
         <div className="text-center mb-5">
-         <h1 style={{paddingTop:50}} className="display-4 fw-bold mb-5">WHERE TO? 🛫</h1>
+        <h1 className="display-4 fw-bold mb-5" style={{
+          fontFamily: '"Pacifico", cursive',
+          fontSize: '4rem',
+          fontWeight: 'bold',
+          color: '#283149',
+          textAlign: 'center',
+          paddingTop:50,
+          textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+        }}>Where <span style={{ color: '#66CDAA' }}>to? 🛫</span></h1>
         </div>
           <div className="form-custom">
           <Form className="row justify-content-around" style={{paddingBottom:50}} onSubmit={handleSubmit}>

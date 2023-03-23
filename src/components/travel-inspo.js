@@ -13,9 +13,15 @@ function TravelInspo() {
   return (
     <div className="container travel-inspo my-5">
       <div className="container travel-inspo my-5">
-        <h1 id="travelHeader" className="text-center display-4 fw-bold mb-5">
-          ✨DESTINATION INSPIRATION✨
-        </h1>
+      <h1 className="display-4 fw-bold mb-5" style={{
+          fontFamily: '"Pacifico", cursive',
+          fontSize: '4rem',
+          fontWeight: 'bold',
+          color: '#283149',
+          textAlign: 'center',
+          textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+        }}>✨Destination <span style={{ color: '#66CDAA' }}>Inspo...✨</span></h1>
+    
         <CardGroup className="mb-5">
           <Card key="1" className="categoryCard text-white mx-1">
             <Card.Img src={historical} alt="historical image" />

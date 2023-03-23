@@ -50,7 +50,15 @@ function Favorites() {
   return (
     <Container className="py-5 my-5">
       <div className="text-center mb-5">
-        <h1 className="display-4 fw-bold mb-5">FAVORITES❤️</h1>
+      <h1 className="display-4 fw-bold mb-5" style={{
+          fontFamily: '"Pacifico", cursive',
+          fontSize: '4rem',
+          fontWeight: 'bold',
+          color: '#283149',
+          textAlign: 'center',
+          paddingTop:50,
+          textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+        }}>Your <span style={{ color: '#66CDAA' }}>favourites❤️</span></h1>
         <Row className="justify-content-center">
           <Col lg="5">
             <Form onSubmit={handleSubmit}>

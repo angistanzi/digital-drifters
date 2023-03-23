@@ -6,6 +6,7 @@ import TravelInspo from "./components/travel-inspo.js";
 import FlightFilter from "./components/flight-filter";
 import Favorites from "./components/favorite-list.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "typeface-pacifico";
 
 function App() {
   return (
