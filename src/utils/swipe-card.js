@@ -75,7 +75,14 @@ function SwipeCard(props) {
 
   return (
     <div id="attractions">
-      <h1 className="display-4 fw-bold my-5">CHECK THESE OUT...</h1>
+      <h1 className="display-4 fw-bold mb-5" style={{
+        fontFamily: '"Pacifico", cursive',
+        fontSize: '3rem',
+        fontWeight: 'bold',
+        color: '#f2ed6fff',
+        textAlign: 'center',
+        textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+      }}>Check these out...</h1>
       <div className="cardContainer" id="attractions">
         {swipecards[props.category].map((suggestion, index) => (
           <TinderCard
@@ -117,7 +124,15 @@ function SwipeCard(props) {
         </h2>
       )}
       {lastDirection === undefined && (
-        <h2 className="infoText text-center">
+        <h2 className="infoText text-center"
+          style={{
+            fontFamily: '"Pacifico", cursive',
+            fontSize: '3rem',
+            fontWeight: 'bold',
+            color: '#587792ff',
+            textAlign: 'center',
+            textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+          }}>
           Swipe right to add to favourites, and swipe left to see more!
         </h2>
       )}

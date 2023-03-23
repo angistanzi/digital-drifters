@@ -37,77 +37,81 @@ function FlightFilter() {
 
   return (
     <div>
-      <div className="text-center mb-5">
-        <h1 style={{ paddingTop: 50 }} className="display-4 fw-bold mb-5">
-          WHERE TO? 🛫
-        </h1>
-      </div>
-      <div className="form-custom">
-        <Form
-          className="row justify-content-around"
-          style={{ paddingBottom: 50 }}
-          onSubmit={handleSubmit}
-        >
-          {/* Departure location input */}
-          <Form.Group className="col-md-3" controlId="formDeparture">
-            <Form.Label>Departure</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter departure city"
-              onChange={(event) => {
-                setDeparture(event.target.value);
-              }}
-            />
-          </Form.Group>
-          {/* Arrival location input */}
-          <Form.Group className="col-md-3" controlId="formDestination">
-            <Form.Label>Destination</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter destination city"
-              onChange={(event) => {
-                setDestination(event.target.value);
-              }}
-            />
-          </Form.Group>
-          {/* Flight dates input */}
-          <Form.Group className="col-md-2" controlId="formDepartureDate">
-            <Form.Label>Departure date</Form.Label>
-            <Form.Control
-              type="date"
-              onChange={(event) => {
-                setDepartureDate(event.target.value);
-              }}
-            />
-          </Form.Group>
-          <Form.Group className="col-md-2" controlId="formReturnDate">
-            <Form.Label>Return date</Form.Label>
-            <Form.Control
-              type="date"
-              onChange={(event) => {
-                setReturnDate(event.target.value);
-              }}
-            />
-          </Form.Group>
-          <Form.Group className="col-md-2" controlId="formPassengers">
-            <Form.Label>Passengers</Form.Label>
-            <Form.Control
-              as="select"
-              defaultValue="1"
-              onChange={(event) => {
-                setPassengers(event.target.value);
-              }}
-            >
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </Form.Control>
-          </Form.Group>
-
-          {/* Submit button */}
-          <div id="submit-btn">
-            <Button style={{ width: 200 }} variant="custom" type="submit">
+          
+        <div className="text-center mb-5">
+        <h1 className="display-4 fw-bold mb-5" style={{
+          fontFamily: '"Pacifico", cursive',
+          fontSize: '4rem',
+          fontWeight: 'bold',
+          color: '#283149',
+          textAlign: 'center',
+          paddingTop:50,
+          textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+        }}>Where <span style={{ color: '#66CDAA' }}>to? 🛫</span></h1>
+        </div>
+          <div className="form-custom">
+          <Form className="row justify-content-around" style={{paddingBottom:50}} onSubmit={handleSubmit}>
+              {/* Departure location input */}
+              <Form.Group className="col-md-3" controlId="formDeparture">
+                <Form.Label>Departure</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter departure city"
+                  onChange={(event) => {
+                    setDeparture(event.target.value);
+                  }}
+                />
+              </Form.Group>
+              {/* Arrival location input */}
+              <Form.Group className="col-md-3" controlId="formDestination">
+                <Form.Label>Destination</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter destination city"
+                  onChange={(event) => {
+                    setDestination(event.target.value);
+                  }}
+                />
+              </Form.Group>
+              {/* Flight dates input */}
+              <Form.Group className="col-md-2" controlId="formDepartureDate">
+                <Form.Label>Departure date</Form.Label>
+                <Form.Control
+                  type="date"
+                  onChange={(event) => {
+                    setDepartureDate(event.target.value);
+                  }}
+                />
+              </Form.Group>
+              <Form.Group className="col-md-2" controlId="formReturnDate">
+                <Form.Label>Return date</Form.Label>
+                <Form.Control
+                  type="date"
+                  onChange={(event) => {
+                    setReturnDate(event.target.value);
+                  }}
+                />
+              </Form.Group>
+              <Form.Group className="col-md-2" controlId="formPassengers">
+                <Form.Label>Passengers</Form.Label>
+                <Form.Control
+                  as="select"
+                  defaultValue="1"
+                  onChange={(event) => {
+                    setPassengers(event.target.value);
+                  }}
+                >
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </Form.Control>
+              </Form.Group>
+            
+            
+            {/* Submit button */}
+            <div id="submit-btn">
+            <Button style={{width:200}} variant="custom" type="submit">
               Search
             </Button>
           </div>
