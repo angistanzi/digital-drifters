@@ -15,7 +15,14 @@ function AuthenticationPage({ handleLogin }) {
   return (
     <Container className="py-5 my-5">
       <div className="text-center mb-5">
-        <h1 className="display-4 fw-bold mb-5">WELCOME! PLEASE LOGIN</h1>
+        <h1  style={{
+          fontFamily: '"Pacifico", cursive',
+          fontSize: '4rem',
+          fontWeight: 'bold',
+          color: '#283149',
+          textAlign: 'center',
+          textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+        }}className="display-4 fw-bold mb-5">Welcome! <span style={{ color: '#66CDAA' }}>Please login💻</span> </h1>
       </div>
       <Row className="justify-content-center">
         <Col lg="6">
