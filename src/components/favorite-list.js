@@ -86,7 +86,13 @@ function Favorites() {
               textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
             }}>Places I've been</h1>
             {visitedCities.length === 0 ? (
-              <h5>You haven't visited any cities yet!</h5>
+              <h5 style={{
+                fontFamily: '"Pacifico"',
+                fontSize: '2rem',
+                color: '#587792ff',
+                textAlign: 'center',
+                textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+              }}>You haven't visited any cities yet!</h5>
             ) : visitedCities.length === 1 ? (
               <h5>{`So far you've visited ${visitedCities.length} city!`}</h5>
             ) : (
@@ -138,11 +144,29 @@ function Favorites() {
               textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
             }}>Places I want to go</h1>
             {savedCities.length === 0 ? (
-              <h5>You haven't any saved cities yet.</h5>
+              <h5 style={{
+                fontFamily: '"Pacifico"',
+                fontSize: '2rem',
+                color: '#587792ff',
+                textAlign: 'center',
+                textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+              }}>You haven't any saved cities yet.</h5>
             ) : savedCities.length === 1 ? (
-              <h5>{`So far you want to visit ${savedCities.length} city!`}</h5>
+              <h5 style={{
+                fontFamily: '"Pacifico"',
+                fontSize: '2rem',
+                color: '#587792ff',
+                textAlign: 'center',
+                textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+              }}>{`So far you want to visit ${savedCities.length} city!`}</h5>
             ) : (
-              <h5>{`So far you want to visit ${savedCities.length} cities!`}</h5>
+              <h5 style={{
+                fontFamily: '"Pacifico"',
+                fontSize: '2rem',
+                color: '#587792ff',
+                textAlign: 'center',
+                textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+              }}>{`So far you want to visit ${savedCities.length} cities!`}</h5>
             )}
           </div>
 
