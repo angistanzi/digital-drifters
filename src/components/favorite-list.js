@@ -50,13 +50,13 @@ function Favorites() {
   return (
     <Container className="py-5 my-5">
       <div className="text-center mb-5">
-      <h1 className="display-4 fw-bold mb-5" style={{
+        <h1 className="display-4 fw-bold mb-5" style={{
           fontFamily: '"Pacifico", cursive',
           fontSize: '4rem',
           fontWeight: 'bold',
           color: '#283149',
           textAlign: 'center',
-          paddingTop:50,
+          paddingTop: 50,
           textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
         }}>Your <span style={{ color: '#66CDAA' }}>favourites❤️</span></h1>
         <Row className="justify-content-center">
@@ -76,7 +76,15 @@ function Favorites() {
       <Row className="justify-content-evenly">
         <Col lg="5">
           <div className="text-center mb-5">
-            <h2>Places I've been</h2>
+            <h1 className="display-4 fw-bold mb-5" style={{
+              fontFamily: '"Pacifico", cursive',
+              fontSize: '2rem',
+              fontWeight: 'bold',
+              color: '#283149',
+              textAlign: 'center',
+              paddingTop: 50,
+              textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+            }}>Places I've been</h1>
             {visitedCities.length === 0 ? (
               <h5>You haven't visited any cities yet!</h5>
             ) : visitedCities.length === 1 ? (
@@ -120,7 +128,15 @@ function Favorites() {
 
         <Col lg="5">
           <div className="text-center mb-5">
-            <h2>Places I want to go</h2>
+          <h1 className="display-4 fw-bold mb-5" style={{
+              fontFamily: '"Pacifico", cursive',
+              fontSize: '2rem',
+              fontWeight: 'bold',
+              color: '#283149',
+              textAlign: 'center',
+              paddingTop: 50,
+              textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+            }}>Places I want to go</h1>
             {savedCities.length === 0 ? (
               <h5>You haven't any saved cities yet.</h5>
             ) : savedCities.length === 1 ? (
