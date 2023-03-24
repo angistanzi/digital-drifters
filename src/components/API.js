@@ -2,7 +2,7 @@ export const getCityData = (cityName) => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "be7aa16224msh4141bc3db3fa21fp1b2af1jsn8984df291939",
+      "X-RapidAPI-Key": "3cdedca7fbmsh39d0e395cb39a20p145c1ajsn6b8f6962e115",
       "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
     },
   };
