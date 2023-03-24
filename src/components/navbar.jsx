@@ -11,15 +11,16 @@ function Navbar() {
     >
 
       <a className="navbar-brand display-5 fw-bold" href="/home-page" style={{
-          fontFamily: '"Pacifico", cursive',
-          fontSize: '2rem',
-          fontWeight: 'bold',
-          color: '#f4e04dff',
-          textAlign: 'center',
-          paddingTop: 5,
-          textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'}}> 
-          <img src={logoImg} alt="logo" height="100" />
-          Digital <span style={{ color: '#f4e04dff' }}>Drifters</span>
+        fontFamily: '"Pacifico", cursive',
+        fontSize: '2rem',
+        fontWeight: 'bold',
+        color: '#f4e04dff',
+        textAlign: 'center',
+        paddingTop: '2%',
+        textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
+      }}>
+        <img src={logoImg} alt="logo" height="100" />
+        Digital <span style={{ color: '#f4e04dff' }}>Drifters</span>
       </a>
       <button
         className="navbar-toggler"

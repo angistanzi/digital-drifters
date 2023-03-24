@@ -20,7 +20,7 @@ function TravelInspo() {
           color: '#283149',
           textAlign: 'center',
           textShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)'
-        }}>✨Destination <span style={{ color: '#66CDAA' }}>Inspo...✨</span></h1>
+        }}>✨Travel <span style={{ color: '#66CDAA' }}>Inspo...✨</span></h1>
     
         <CardGroup className="mb-5">
           <Card key="1" className="categoryCard text-white mx-1">

@@ -12,23 +12,21 @@ code {
     monospace;
 }
 
-.card-image{
+.card-image {
   object-fit: cover;
 }
 
 .gradientDiv {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    80%,
-    rgb(0, 0, 0, 1)
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0),
+      80%,
+      rgb(0, 0, 0, 1));
   position: absolute;
   height: 100%;
   width: 100%;
 }
 
-#inspo-image{
+#inspo-image {
   max-height: 180px;
 }
 
@@ -37,7 +35,7 @@ body {
   background-color: #CEE397 !important;
 }
 
-.btn-custom{
+.btn-custom {
   background-color: #F2ED6F;
 }
 
@@ -46,7 +44,7 @@ body {
 .navbar-brand {
   padding: 0 15px;
   margin-right: 15px;
-  
+
 }
 
 .navbar-brand img {
@@ -54,46 +52,58 @@ body {
   margin-right: 10px;
 }
 
-.navbar-collapse{
+.navbar-collapse {
   background-color: #8DB1AB;
 }
-.navbar-toggler{
+
+.navbar-toggler {
   color: #9AC9E1;
 }
 
-.navbar{
-  background-color:#8DB1AB;
+.navbar {
+  background-color: #8DB1AB;
 
 }
 
-.navbar-nav a{
+.navbar-nav a {
   color: white;
   text-align: center;
 }
 
-.navbar-nav a:hover{
+.navbar-nav a:hover {
   color: #587792;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   background-image: url(./assets/navbaricon.png) !important;
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar-toggler {
+    top: 80px;
+    right: 10px;
+    position: absolute;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
 }
 
 
 /* footer css */
 
-.content-container{
-    min-height: calc(100vh - 30px) !important;
+.content-container {
+  min-height: calc(100vh - 30px) !important;
 }
 
-.footer--pin{
+.footer--pin {
   position: relative !important;
   left: 0;
   bottom: 0;
 }
 
-.footer{
+.footer {
   background-color: #F2ED6F;
 }
-
-
